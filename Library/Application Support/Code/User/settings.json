@@ -1,0 +1,118 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "editor.guides.indentation": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.wordWrap": "on",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Monolisa, Fira Code, JetBrains Mono, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+    "vsicons.dontShowNewVersionMessage": true,
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "isort.args":["--profile", "black"],
+
+    "workbench.colorTheme": "Snazzy Plus w/ Italics",
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "editor.inlineSuggest.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "github.copilot.advanced": {},
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    // "editor.defaultFormatter": "ms-python.black-formatter",
+    // "editor.formatOnSave": true,
+    "editor.fontSize": 13,
+    "redhat.telemetry.enabled": false,
+
+    // Vim settings
+    "editor.cursorSurroundingLines": 10,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+        "before": ["<leader>", "d"],
+        "after": ["_", "d", "d"]
+        },
+        {
+        "before": ["<leader>", "<Enter>"],
+        "commands": [":nohl"]
+        },
+
+// Moving up and down faster in normal mode
+        {
+            "before": ["J"],
+            "after": ["5", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "k"]
+        },
+
+// Keep joining lines
+        {
+            "before": ["<leader>", "j"],
+            "after": ["J"]
+        },
+
+// Switching between splits (in keybindings.json)
+        // {
+        //     "before": ["<C-h"],
+        //     "after": ["<C-w>", "h"]
+        // },
+        // {
+        //     "before": ["<C-j"],
+        //     "after": ["<C-w>", "j"]
+        // },
+        // {
+        //     "before": ["<C-k"],
+        //     "after": ["<C-w>", "k"]
+        // },
+        // {
+        //     "before": ["<C-l"],
+        //     "after": ["<C-w>", "l"]
+        // },
+
+// VSCode actions
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.gotoSymbol"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.startInInsertMode": false,
+
+}
