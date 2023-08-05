@@ -133,8 +133,11 @@ source $ZSH/oh-my-zsh.sh
 # Paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="~/bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
 
