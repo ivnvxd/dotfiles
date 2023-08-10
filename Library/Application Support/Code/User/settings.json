@@ -17,7 +17,7 @@
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
-        },
+        }
     },
     "isort.args":["--profile", "black"],
 
@@ -40,27 +40,32 @@
     // Vim settings
     "editor.cursorSurroundingLines": 10,
     "vim.easymotion": true,
+    "vim.sneak": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
         {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": ["<leader>", "d"],
-        "after": ["_", "d", "d"]
+            "before": ["<leader>", "d"],
+            "after": ["_", "d", "d"]
         },
         {
-        "before": ["<leader>", "<Enter>"],
-        "commands": [":nohl"]
+            "before": ["<leader>", "<Enter>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["<leader>", "/"],
+            "commands": [":noh"]
         },
 
-// Moving up and down faster in normal mode
+        // Moving up and down faster in normal mode
         {
             "before": ["J"],
             "after": ["5", "j"]
@@ -70,13 +75,13 @@
             "after": ["5", "k"]
         },
 
-// Keep joining lines
+        // Keep joining lines
         {
             "before": ["<leader>", "j"],
             "after": ["J"]
         },
 
-// Switching between splits (in keybindings.json)
+        // Switching between splits (in keybindings.json)
         // {
         //     "before": ["<C-h"],
         //     "after": ["<C-w>", "h"]
@@ -94,7 +99,25 @@
         //     "after": ["<C-w>", "l"]
         // },
 
-// VSCode actions
+        // Easier tab handling
+        {
+            "before": ["<leader>", "t", "t"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["<leader>", "t", "n"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["<leader>", "t", "p"],
+            "commands": [":tabprev"]
+        },
+        {
+            "before": ["<leader>", "t", "o"],
+            "commands": [":tabo"]
+        },
+
+        // VSCode actions
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.files.save"]

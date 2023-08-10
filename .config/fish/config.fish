@@ -16,6 +16,7 @@ thefuck --alias | source
 # Aliases
 alias ls='exa'
 alias cat='bat'
+alias vim='nvim'
 
 alias ll='ls -la'
 alias la='ls -lah'

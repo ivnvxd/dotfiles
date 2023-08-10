@@ -150,6 +150,7 @@ alias pip=/opt/homebrew/opt/python3/libexec/bin/pip
 
 alias ls="exa"
 alias cat="bat"
+alias vim="nvim"
 
 alias ll="ls -la"
 alias la="ls -lah"

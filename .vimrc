@@ -59,7 +59,8 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " W
 " COLORS -----------------------------------------------------------------------
 
 try
-    colorscheme snazzy
+    " colorscheme snazzy
+    colorscheme catppuccin_mocha
 catch
 endtry
 
