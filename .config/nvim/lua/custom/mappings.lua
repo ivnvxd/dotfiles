@@ -36,6 +36,13 @@ M.general = {
       "find 1 character"
     },
 
+    ["<leader>s"] = {
+      function()
+        require('hop').hint_lines_skip_whitespace()
+      end,
+      "beginning of lines",
+    },
+
     ["t"] = {
       function ()
         require('hop').hint_char1({hint_offset = -1})
@@ -68,21 +75,37 @@ M.general = {
       "start of words backwards",
       },
 
-    ["<leader><leader>l"] = {
-      function()
-        require('hop').hint_lines_skip_whitespace()
-      end,
-      "beginning of lines",
-      },
   },
 
   v = {
-    ["s"] = {
+    ["f"] = {
       function ()
         require('hop').hint_char1()
       end,
       "find 1 character"
     },
+
+   ["<leader>s"] = {
+      function()
+        require('hop').hint_lines_skip_whitespace()
+      end,
+      "beginning of lines",
+    },
+
+    ["t"] = {
+      function ()
+        require('hop').hint_char1({hint_offset = -1})
+      end,
+      "until 1 character"
+    },
+
+    ["s"] = {
+      function ()
+        require('hop').hint_char2()
+      end,
+      "find 2 characters",
+    },
+
   }
 }
 

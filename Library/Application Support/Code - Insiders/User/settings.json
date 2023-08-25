@@ -20,7 +20,7 @@
     },
     "isort.args":["--profile", "black"],
 
-    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.colorTheme": "Snazzy Plus w/ Italics",
     "workbench.iconTheme": "catppuccin-macchiato",
     "editor.inlineSuggest.enabled": true,
     "files.trimTrailingWhitespace": true,
