@@ -82,10 +82,11 @@ let mapleader = "\<SPACE>"
 map <leader>d "_dd
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent> <Esc> :noh<cr>
 
-" Save file with <leader>w
+" Save file
 nnoremap <leader>w :w<cr>
+nnoremap <C-s> :w<cr>
 
 " Move faster
 map J 5j
@@ -156,3 +157,14 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+
+" PLUGINS ----------------------------------------------------------------------
+
+call plug#begin()
+
+Plug 'tpope/vim-surround'
+Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
