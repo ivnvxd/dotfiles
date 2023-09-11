@@ -16,10 +16,29 @@ thefuck --alias | source
 # Aliases
 alias ls='exa'
 alias cat='bat'
-alias vim='nvim'
+alias vi='nvim'
 
 alias ll='ls -la'
 alias la='ls -lah'
 
 alias ..='cd ..'
 alias cd..='cd ..'
+
+function update -d "update brew, fish, fisher and mac app store"
+    echo 'Start updating ...'
+
+    echo 'Updating Homebrew...'
+    brew update
+    brew upgrade
+    brew cleanup
+
+    echo 'Updating fish shell...'
+    fisher update
+    fish_update_completions
+
+    echo 'Checking Apple Updates...'
+    /usr/sbin/softwareupdate -ia
+
+    echo 'All updates completed!'
+    exit 0
+end
