@@ -138,18 +138,21 @@ to
 
 ## 11. Add defaults
 
-```bash
-# Show Library folder
-chflags nohidden ~/Library
+```sh
+chflags nohidden ~/Library  # Show Library folder
+defaults write com.apple.finder AppleShowAllFiles YES  # Show hidden files
+defaults write com.apple.finder ShowPathbar -bool true  # Show path bar
+defaults write com.apple.finder ShowStatusBar -bool true  # Show status bar
+```
 
-# Show hidden files
-defaults write com.apple.finder AppleShowAllFiles YES
+Enable key-repeating
 
-# Show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# Show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+```sh
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
+defaults write com.vscodium ApplePressAndHoldEnabled -bool false                      # For VS Codium
+defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
+defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
 ```
 
 ## 12. Setup Go
