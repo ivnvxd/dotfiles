@@ -85,7 +85,7 @@ M.general = {
       "find 1 character"
     },
 
-   ["<leader>s"] = {
+    ["<leader>s"] = {
       function()
         require('hop').hint_lines_skip_whitespace()
       end,
