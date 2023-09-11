@@ -101,6 +101,11 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Easymotion remappings
+map f <leader><leader>s
+map <leader>s <Plug>(easymotion-bd-jk)
+map t <Plug>(easymotion-bd-t)
+
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
