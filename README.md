@@ -55,13 +55,52 @@ git clone git@github.com:ivnvxd/dotfiles.git
 brew bundle install
 ```
 
-## 5. Setup fish shell
+## 5. Setup zsh shell
 
-Make fish the default shell:
+Install oh-my-zsh:
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Install Powerlevel10k:
+
+```sh
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+# configure Pure theme:
+p10k configure
+```
+
+Install plugins:
+
+```sh
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+```
+
+## 5.1 Setup fish shell
+
+Add fish to the shell list:
 
 ```sh
 sudo bash -c 'echo $(which fish) >> /etc/shells'
+```
+
+(optional) make fish the default shell:
+
+```sh
 chsh -s $(which fish)
+```
+
+Uncomment in .config/tmux/tmux.conf:
+
+```
+set-option -g default-shell "/opt/homebrew/bin/fish"
 ```
 
 Install fish `pure` theme:

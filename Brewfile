@@ -60,10 +60,9 @@ brew "fisher"
 cask "kitty"
 brew "tmux"
 cask "iterm2"
-brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
-brew "zsh-fast-syntax-highlighting"
+brew "zsh-history-substring-search"
 cask "warp"
 
 

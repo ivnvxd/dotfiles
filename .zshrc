@@ -80,23 +80,32 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aliases
 	brew
-	git
-	common-aliases
-	node
- 	npm
-	rand-quote
-	sudo
-	yarn
-	z
 	colored-man-pages
 	colorize
+	common-aliases
 	cp
-    zsh-completions
+  docker
+	fast-syntax-highlighting
+	git
+  golang
+#  node
+#  npm
+  pip
+  python
+  rsync
+	sudo
+  tmux
+  web-search
+#  yarn
+	z
 	zsh-autosuggestions
-	zsh-syntax-highlighting
-	zsh-fast-syntax-highlighting
-    )
+#  zsh-syntax-highlighting
+  zsh-history-substring-search
+)
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -150,7 +159,7 @@ alias pip=/opt/homebrew/opt/python3/libexec/bin/pip
 
 alias ls="exa"
 alias cat="bat"
-alias vim="nvim"
+alias vi="nvim"
 
 alias ll="ls -la"
 alias la="ls -lah"
