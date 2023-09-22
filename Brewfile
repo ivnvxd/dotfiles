@@ -35,6 +35,7 @@ cask "sublime-merge"
 
 
 # CLI
+brew "mas"
 brew "exa"
 brew "bat"
 brew "thefuck"
@@ -42,7 +43,6 @@ brew "tldr"
 brew "fzf"
 brew "z"
 brew "tree"
-brew "mas"
 brew "wget"
 brew "gping"
 brew "htop"
@@ -62,7 +62,6 @@ brew "tmux"
 cask "iterm2"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
-brew "zsh-history-substring-search"
 cask "warp"
 
 
@@ -81,11 +80,12 @@ cask "balenaetcher"
 cask "qmk-toolbox"
 cask "deepl"
 cask "imageoptim"
+cask "shottr"
+cask "syncthing"
 
 cask "cakebrew"
-cask "shottr"
-cask "synology-drive"
 cask "ngrok"
+# cask "synology-drive"
 
 
 # Apps
@@ -113,11 +113,13 @@ cask "anydesk"
 cask "teamviewer"
 cask "microsoft-remote-desktop"
 cask "nrlquaker-winbox"
+cask "epic-games"
+cask "nvidia-geforce-now"
 
 cask "cloudcompare"
 cask "meshlab"
 cask "blender"
-cask "tigervnc-viewer"
+# cask "tigervnc-viewer"
 
 
 # Fonts
@@ -151,3 +153,6 @@ mas "iMovie", id: 408981434
 mas "GarageBand", id: 682658836
 mas "AdGuard for Safari", id: 1440147259
 mas "Desk Remote Control", id: 1509037746
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "Save to Pocket", id: 1477385213
+mas "WireGuard", id: 1451685025
