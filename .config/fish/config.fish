@@ -36,8 +36,8 @@ function update -d "update brew, fish, fisher and mac app store"
     fisher update
     fish_update_completions
 
-    echo 'Checking Apple Updates...'
-    /usr/sbin/softwareupdate -ia
+    #    echo 'Checking Apple Updates...'
+    #    /usr/sbin/softwareupdate -ia
 
     echo 'All updates completed!'
     exit 0
