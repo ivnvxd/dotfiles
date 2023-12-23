@@ -73,6 +73,8 @@ set whichwrap+=<,>,h,l
 
 " Type jj to exit insert mode quickly.
 inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
 
 " Map the leader key to space.
 nnoremap <SPACE> <Nop>
@@ -102,9 +104,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Easymotion remappings
-map f <leader><leader>s
+map <leader>f <leader><leader>s
 map <leader>s <Plug>(easymotion-bd-jk)
-map t <Plug>(easymotion-bd-t)
+map <leader>t <Plug>(easymotion-bd-t)
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann

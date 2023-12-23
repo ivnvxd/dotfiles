@@ -4,7 +4,7 @@ M.ui = {
   theme = 'catppuccin',
   statusline = {
     theme = 'default',
-    separator_style = 'default'
+    separator_style = "arrow"
   }
 }
 M.plugins = 'custom.plugins'

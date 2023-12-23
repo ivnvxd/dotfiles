@@ -1,5 +1,11 @@
 # dotfiles
 
+## 0. Install Command Line Tools
+
+```sh
+xcode-select --install
+```
+
 ## 1. Install brew
 
 ```sh
@@ -46,13 +52,19 @@ cat ~/.ssh/id_ed25519.pub
 from <https://github.com/ivnvxd/dotfiles>
 
 ```sh
-git clone git@github.com:ivnvxd/dotfiles.git
+git clone git@github.com:ivnvxd/dotfiles.git ~
 ```
 
 ## 4. Install everything from  `~/Brewfile`
 
 ```sh
 brew bundle install
+```
+
+*To create a Brewfile:*
+
+```sh
+brew bundle dump
 ```
 
 ## 5. Setup zsh shell
@@ -91,15 +103,15 @@ Add fish to the shell list:
 sudo bash -c 'echo $(which fish) >> /etc/shells'
 ```
 
-(optional) make fish the default shell:
+*(optional) make fish the default shell:*
 
 ```sh
 chsh -s $(which fish)
 ```
 
-Uncomment in .config/tmux/tmux.conf:
+*(optional) Uncomment in .config/tmux/tmux.conf:*
 
-```
+```sh
 set-option -g default-shell "/opt/homebrew/bin/fish"
 ```
 
@@ -135,6 +147,7 @@ Install syntax highlighting:
 
 `:TSInstall python`
 `:TSInstall go`
+`:TSInstall elixir`
 
 Install Mason: `:MasonInstallAll`
 
@@ -194,6 +207,15 @@ defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool fa
 defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
 ```
 
+Fix controller Home button:
+
+```sh
+defaults write com.apple.GameController bluetoothPrefsMenuLongPressAction -integer 0
+defaults write com.apple.GameController bluetoothPrefsShareLongPressSystemGestureMode -integer -1
+
+killall Dock
+```
+
 ## 12. Setup Go
 
 ```sh
@@ -202,4 +224,21 @@ go install -v github.com/incu6us/goimports-reviser/v3@latest
 go install github.com/segmentio/golines@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
 
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+
+```
+
+## 13. Setup VSCode
+
+Install extensions:
+
+```sh
+./vscode-extension-install.sh
+```
+
+*To create a list of installed extensions:*
+
+```sh
+code --list-extensions > extensions.txt
 ```

@@ -1,9 +1,5 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "alt+r",
-        "command": "python.execInTerminal"
-    },
 
 // Ensure that tab button works in vim.
     {
@@ -17,11 +13,52 @@
         "when": "editorTextFocus && !editorTabMovesFocus"
     },
 
-// Commit inline suggestions with tab.
+// Commit inline suggestions with tab if tab button for vim is enabled.
     {
         "key": "tab",
         "command": "editor.action.inlineSuggest.commit",
         "when": "textInputFocus && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+    },
+
+// Switch between splits in Vim normal mode
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "vim.mode == Normal && vim.use<C-w> == false"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown",
+        "when": "vim.mode == Normal && vim.use<C-w> == false"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp",
+        "when": "vim.mode == Normal && vim.use<C-w> == false"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "vim.mode == Normal && vim.use<C-w> == false"
+    },
+
+// Add partial suggestions.
+    {
+        "key": "alt+ctrl+l",
+        "command": "editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible"
+    },
+
+// Traverse VSCode IntelliSense suggestions with vim keybindings.
+    {
+        "key": "alt+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
 
 // Switch between tabs.
@@ -34,24 +71,6 @@
         "command": "workbench.action.previousEditor"
     },
 
-// Switch between splits
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
-    },
-
 // Toggle terminal.
     {
         "key": "ctrl+`",
@@ -62,15 +81,99 @@
         "command": "workbench.action.togglePanel"
     },
 
- // Traverse VSCode IntelliSense suggestions with vim keybindings.
-    {
-        "key": "alt+k",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "alt+j",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    }
+// // Split editor in Vim normal mode.
+//     {
+//         "key": "ctrl+\\",
+//         "command": "workbench.action.splitEditorRight",
+//         "when": "vim.mode == Normal && vim.use<C-w> == false"
+//     },
+//     {
+//         "key": "ctrl+-",
+//         "command": "workbench.action.splitEditorDown",
+//         "when": "vim.mode == Normal && vim.use<C-w> == false"
+//     },
+//     {
+//         "key": "ctrl+x",
+//         "command": "workbench.action.closeActiveEditor",
+//         "when": "vim.mode == Normal && vim.use<C-w> == false"
+//     },
+
+// // Move cursor in insert mode with C-b and C-e
+//     {
+//         "key": "ctrl+b",
+//         "command": "cursorHome",
+//         "when": "editorTextFocus && vim.mode == Insert"
+//     },
+//     {
+//         "key": "ctrl+e",
+//         "command": "cursorEnd",
+//         "when": "editorTextFocus && vim.mode == Insert"
+//     },
+
+//     {
+//         "key": "ctrl+f",
+//         "command": "-cursorRight",
+//         // "when": "textInputFocus"
+//     },
+//     {
+//         "key": "ctrl+f",
+//         "command": "type",
+//         "args": {
+//             "text": "<C-f>"
+//         },
+//     },
+
+// // Add vim-like movements
+//     {
+//         "key": "ctrl+h",
+//         "command": "cursorLeft",
+//         "when": "textInputFocus"
+//     },
+//     {
+//         "key": "ctrl+j",
+//         "command": "cursorDown",
+//         "when": "textInputFocus"
+//     },
+//     {
+//         "key": "ctrl+k",
+//         "command": "cursorUp",
+//         "when": "textInputFocus"
+//     },
+//     {
+//         "key": "ctrl+l",
+//         "command": "cursorRight",
+//         "when": "textInputFocus"
+//     },
+
+// // Keep default actions on hjk
+//     {
+//         "key": "ctrl+shift+j",
+//         "command": "editor.action.joinLines",
+//         "when": "editorTextFocus && !editorReadonly"
+//     },
+//     {
+//         "key": "ctrl+j",
+//         "command": "-editor.action.joinLines",
+//         "when": "editorTextFocus && !editorReadonly"
+//     },
+//     {
+//         "key": "ctrl+shift+k",
+//         "command": "deleteAllRight",
+//         "when": "textInputFocus && !editorReadonly"
+//     },
+//     {
+//         "key": "ctrl+k",
+//         "command": "-deleteAllRight",
+//         "when": "textInputFocus && !editorReadonly"
+//     },
+//     {
+//         "key": "ctrl+shift+h",
+//         "command": "deleteLeft",
+//         "when": "textInputFocus"
+//     },
+//     {
+//         "key": "ctrl+h",
+//         "command": "-deleteLeft",
+//         "when": "textInputFocus"
+//     },
 ]

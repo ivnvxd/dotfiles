@@ -148,14 +148,14 @@ export PATH="$HOME/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
+# export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
 
 
 # Aliases
 eval $(thefuck --alias)
 
-alias python=/opt/homebrew/bin/python3
-alias pip=/opt/homebrew/opt/python3/libexec/bin/pip
+alias python=/opt/homebrew/bin/python3.12
+alias pip=/opt/homebrew/opt/python@3.12/libexec/bin/pip
 
 alias ls="exa"
 alias cat="bat"
@@ -166,3 +166,15 @@ alias la="ls -lah"
 
 alias ..="cd .."
 alias cd..="cd .."
+
+# fzf settings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey "ç" fzf-cd-widget
+
+# Multiple Homebrews on Apple Silicon
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+

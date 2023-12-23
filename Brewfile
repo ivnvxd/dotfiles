@@ -7,29 +7,32 @@ tap "ngrok/ngrok"
 
 
 # Code
-brew "python@3.11"
+brew "python@3.12"
+brew "python-tk@3.12"
 brew "jupyterlab"
 brew "poetry"
 brew "git"
 brew "golang"
 brew "golangci-lint"
+brew "elixir"
 brew "neovim"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 cask "sublime-text"
 cask "zed"
 cask "jetbrains-toolbox"
-brew "docker"
+cask "docker"
 brew "cmake"
 brew "node"
 brew "ipython"
-brew "postgresql@14"
-brew "redis"
 cask "dbeaver-community"
+cask "pgadmin4"
+cask "mongodb-compass"
 cask "postman"
 cask "fork"
 cask "github"
-
+# cask "gitkraken"
+# cask "tower"
 cask "sourcetree"
 cask "sublime-merge"
 
@@ -50,8 +53,14 @@ brew "ffmpeg"
 brew "asciinema"
 cask "zerotier-one"
 brew "telnet"
-brew "curl"
+brew "kubectl"
+brew "minikube"
+brew "protobuf"
+cask "gh"
+brew "kubernetes-cli"
 brew "neofetch"
+# brew "curl"
+# brew "openssl@3"
 
 
 # Terminal
@@ -63,6 +72,8 @@ cask "iterm2"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 cask "warp"
+# cask "alacritty"
+# cask "pure"
 
 
 # Tools
@@ -82,7 +93,8 @@ cask "deepl"
 cask "imageoptim"
 cask "shottr"
 cask "syncthing"
-
+cask "blackhole-2ch"
+cask "protonvpn"
 cask "cakebrew"
 cask "ngrok"
 # cask "synology-drive"
@@ -115,14 +127,14 @@ cask "microsoft-remote-desktop"
 cask "nrlquaker-winbox"
 cask "epic-games"
 cask "nvidia-geforce-now"
-
-cask "cloudcompare"
-cask "meshlab"
-cask "blender"
+# cask "cloudcompare"
+# cask "meshlab"
+# cask "blender"
 # cask "tigervnc-viewer"
 
 
 # Fonts
+cask "font-monaspace"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "font-hack"
@@ -145,7 +157,6 @@ cask "font-ubuntu-mono-nerd-font"
 # App Store
 mas "Amphetamine", id: 937984704
 mas "The Unarchiver", id: 425424353
-mas "Xcode", id: 497799835
 mas "Pages", id: 409201541
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
@@ -156,3 +167,4 @@ mas "Desk Remote Control", id: 1509037746
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Save to Pocket", id: 1477385213
 mas "WireGuard", id: 1451685025
+mas "Bitwarden", id: 1352778147

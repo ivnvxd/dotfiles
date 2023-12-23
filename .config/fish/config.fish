@@ -24,6 +24,8 @@ alias la='ls -lah'
 alias ..='cd ..'
 alias cd..='cd ..'
 
+bind -M insert "ç" fzf-cd-widget
+
 function update -d "update brew, fish, fisher and mac app store"
     echo 'Start updating ...'
 

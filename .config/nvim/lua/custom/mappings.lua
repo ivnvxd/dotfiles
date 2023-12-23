@@ -5,7 +5,9 @@ local M = {}
 
 M.general = {
   i = {
-    ["jj"] = { "<Esc>", "exit insert mode"}
+    ["jj"] = { "<Esc>", "exit insert mode"},
+    ["kj"] = { "<Esc>", "exit insert mode"},
+    ["jk"] = { "<Esc>", "exit insert mode"}
   },
 
   n = {
@@ -29,7 +31,7 @@ M.general = {
     ["<leader>d"] = { "_dd", "delete line without copying" },
 
     -- hop plugin (easymotion+sneak like)
-    ["f"] = {
+    ["<leader>f"] = {
       function ()
         require('hop').hint_char1()
       end,
@@ -43,7 +45,7 @@ M.general = {
       "beginning of lines",
     },
 
-    ["t"] = {
+    ["<leader>t"] = {
       function ()
         require('hop').hint_char1({hint_offset = -1})
       end,
@@ -78,7 +80,7 @@ M.general = {
   },
 
   v = {
-    ["f"] = {
+    ["<leader>f"] = {
       function ()
         require('hop').hint_char1()
       end,
@@ -92,7 +94,7 @@ M.general = {
       "beginning of lines",
     },
 
-    ["t"] = {
+    ["<leader>t"] = {
       function ()
         require('hop').hint_char1({hint_offset = -1})
       end,
