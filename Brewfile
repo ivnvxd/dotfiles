@@ -33,7 +33,7 @@ cask "fork"
 cask "github"
 # cask "gitkraken"
 # cask "tower"
-cask "sourcetree"
+# cask "sourcetree"
 cask "sublime-merge"
 
 
@@ -56,7 +56,7 @@ brew "telnet"
 brew "kubectl"
 brew "minikube"
 brew "protobuf"
-cask "gh"
+brew "gh"
 brew "kubernetes-cli"
 brew "neofetch"
 # brew "curl"
@@ -127,6 +127,7 @@ cask "microsoft-remote-desktop"
 cask "nrlquaker-winbox"
 cask "epic-games"
 cask "nvidia-geforce-now"
+cask "cron"
 # cask "cloudcompare"
 # cask "meshlab"
 # cask "blender"
@@ -168,3 +169,11 @@ mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Save to Pocket", id: 1477385213
 mas "WireGuard", id: 1451685025
 mas "Bitwarden", id: 1352778147
+mas "Consent-O-Matic", id: 1606897889
+mas "Hush", id: 1544743900
+mas "Noir", id: 1592917505
+mas "Norka VPN", id: 6444030286
+mas "PayPal Honey", id: 1472777122
+mas "Polyglot", id: 1471801525
+mas "SponsorBlock", id: 1573461917
+mas "Wipr", id: 1320666476
