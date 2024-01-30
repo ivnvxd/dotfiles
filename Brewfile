@@ -137,22 +137,17 @@ cask "cron"
 # Fonts
 cask "font-monaspace"
 cask "font-fira-code"
-cask "font-fira-code-nerd-font"
 cask "font-hack"
-cask "font-hack-nerd-font"
 cask "font-ibm-plex-mono"
 cask "font-iosevka"
-cask "font-iosevka-term-nerd-font"
 cask "font-jetbrains-mono"
-cask "font-jetbrains-mono-nerd-font"
 cask "font-martian-mono"
 cask "font-meslo-lg"
-cask "font-meslo-lg-nerd-font"
 cask "font-poppins"
 cask "font-red-hat-mono"
 cask "font-source-code-pro"
 cask "font-ubuntu-mono"
-cask "font-ubuntu-mono-nerd-font"
+cask "font-symbols-only-nerd-font"
 
 
 # App Store
