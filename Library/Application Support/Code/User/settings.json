@@ -20,8 +20,8 @@
     "redhat.telemetry.enabled": false,
     "terminal.integrated.fontFamily": "Meslo LG S",
     "terminal.integrated.fontSize": 13,
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "editor.inlineSuggest.enabled": true,
     "files.trimTrailingWhitespace": true,
     // "editor.formatOnSave": true,
@@ -217,5 +217,7 @@
     "editor.glyphMargin": true,
     "projectManager.git.baseFolders": [
         "~/dev/src/"
-    ]
+    ],
+    "workbench.tree.enableStickyScroll": true,
+    "editor.stickyScroll.enabled": true,
 }
