@@ -53,12 +53,23 @@ return {
 
       opts.preselect = cmp.PreselectMode.None
       opts.completion = {
-        completeopt = "menu,menuone,noinsert,noselect",
+        completeopt = "menu,menuone,noinsert,noselect,preview",
       }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
+        -- Disable CR confirm
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
         ["<S-CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
+
+        -- Stop using arrow keys to navigate the completion menu
+        ["<Down>"] = cmp.mapping(function(fallback)
+          cmp.close()
+          fallback()
+        end, { "i" }),
+        ["<Up>"] = cmp.mapping(function(fallback)
+          cmp.close()
+          fallback()
+        end, { "i" }),
 
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then

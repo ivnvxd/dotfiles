@@ -3,7 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
-tap "ngrok/ngrok"
+# tap "ngrok/ngrok"
 
 
 # Code
@@ -31,15 +31,11 @@ cask "mongodb-compass"
 cask "postman"
 cask "fork"
 cask "github"
-# cask "gitkraken"
-# cask "tower"
-# cask "sourcetree"
 cask "sublime-merge"
 
 
 # CLI
 brew "mas"
-brew "exa"
 brew "bat"
 brew "thefuck"
 brew "tldr"
@@ -62,6 +58,7 @@ brew "neofetch"
 brew "ripgrep"
 brew "lazygit"
 brew "fd"
+brew "clifm"
 # brew "curl"
 # brew "openssl@3"
 
@@ -99,7 +96,8 @@ cask "syncthing"
 cask "blackhole-2ch"
 cask "protonvpn"
 cask "cakebrew"
-cask "ngrok"
+cask "little-snitch"
+# cask "ngrok"
 # cask "synology-drive"
 
 
@@ -150,27 +148,36 @@ cask "font-poppins"
 cask "font-red-hat-mono"
 cask "font-source-code-pro"
 cask "font-ubuntu-mono"
+
 cask "font-symbols-only-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-iosevka-nerd-font"
+cask "font-meslo-lg-nerd-font"
+cask "font-monaspace-nerd-font"
+cask "font-ubuntu-mono-nerd-font"
 
 
 # App Store
 mas "Amphetamine", id: 937984704
-mas "The Unarchiver", id: 425424353
+# mas "The Unarchiver", id: 425424353
 mas "Pages", id: 409201541
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "iMovie", id: 408981434
 mas "GarageBand", id: 682658836
-mas "AdGuard for Safari", id: 1440147259
 mas "Desk Remote Control", id: 1509037746
+mas "WireGuard", id: 1451685025
+mas "Norka VPN", id: 6444030286
+
+# Safari Extensions
+mas "AdGuard for Safari", id: 1440147259
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Save to Pocket", id: 1477385213
-mas "WireGuard", id: 1451685025
 mas "Bitwarden", id: 1352778147
 mas "Consent-O-Matic", id: 1606897889
 mas "Hush", id: 1544743900
 mas "Noir", id: 1592917505
-mas "Norka VPN", id: 6444030286
 mas "PayPal Honey", id: 1472777122
 mas "Polyglot", id: 1471801525
 mas "SponsorBlock", id: 1573461917

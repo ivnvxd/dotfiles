@@ -131,30 +131,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Install plugins with `<prefix> I`
 
-## 7. Setup nvim
-
-Install NvChad:
-
-```sh
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-```
-
-Do `n`ot install the example config.
-
-Change theme: `Space-t-h`
-
-Install syntax highlighting:
-
-`:TSInstall python`
-`:TSInstall go`
-`:TSInstall elixir`
-
-Install Mason: `:MasonInstallAll`
-
-Show installed highlighted languages:`:TSInstallInfo`
-Show cheatsheet: `Space-c-h`
-
-## 8. Setup Vim
+## 7. Setup Vim
 
 Install Plug
 
@@ -165,7 +142,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 `:PlugInstall` to install plugins.
 
-## 9. Setup Poetry
+## 8. Setup Poetry
 
 Either brew or:
 
@@ -179,7 +156,7 @@ Configure Poetry to create vitual env inside each project
 poetry config virtualenvs.in-project true
 ```
 
-## 10. Restore settings
+## 9. Restore settings
 
 Syncalicious
 
@@ -188,7 +165,7 @@ from
 to
 `~/Library/Preferences`
 
-## 11. Add defaults
+## 10. Add defaults
 
 ```sh
 chflags nohidden ~/Library  # Show Library folder
@@ -216,7 +193,7 @@ defaults write com.apple.GameController bluetoothPrefsShareLongPressSystemGestur
 killall Dock
 ```
 
-## 12. Setup Go
+## 11. Setup Go
 
 ```sh
 go install mvdan.cc/gofumpt@latest
@@ -229,7 +206,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ```
 
-## 13. Setup VSCode
+## 12. Setup VSCode
 
 Install extensions:
 

@@ -18,10 +18,10 @@
     "editor.fontSize": 13,
     // "editor.fontWeight": "normal",
     "redhat.telemetry.enabled": false,
-    "terminal.integrated.fontFamily": "Meslo LG S",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
     "terminal.integrated.fontSize": 13,
-    "workbench.colorTheme": "Catppuccin Macchiato",
-    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
     "editor.inlineSuggest.enabled": true,
     "files.trimTrailingWhitespace": true,
     // "editor.formatOnSave": true,
@@ -70,138 +70,138 @@
         "markdown": true,
         "scminput": false
     },
-    "editor.cursorSurroundingLines": 10,
-    // Vim settings
-    "vim.startInInsertMode": false,
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["k", "j"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        },
-        // Move the cursor in insert mode
-        {
-            "before": ["<C-h>"],
-            "after": ["<left>"]
-        },
-        {
-            "before": ["<C-j>"],
-            "after": ["<down>"]
-        },
-        {
-            "before": ["<C-k>"],
-            "after": ["<up>"]
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["<right>"]
-        },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>", "d"],
-            "after": ["_", "d", "d"]
-        },
-        {
-            "before": ["<Esc>"],
-            "commands": [":noh"]
-        },
-        // Moving up and down faster in normal mode
-        {
-            "before": ["J"],
-            "after": ["5", "j"]
-        },
-        {
-            "before": ["K"],
-            "after": ["5", "k"]
-        },
-        // Keep joining lines
-        {
-            "before": ["<leader>", "j"],
-            "after": ["J"]
-        },
-        // Easier tab handling
-        {
-            "before": ["<leader>", "t", "t"],
-            "commands": [":tabnew"]
-        },
-        {
-            "before": ["<leader>", "t", "n"],
-            "commands": [":tabnext"]
-        },
-        {
-            "before": ["<leader>", "t", "p"],
-            "commands": [":tabprev"]
-        },
-        {
-            "before": ["<leader>", "t", "o"],
-            "commands": [":tabo"]
-        },
-        // VSCode actions
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": ["<leader>", "p"],
-            "commands": ["workbench.action.showCommands"]
-        },
-        // {
-        //     "before": ["<leader>","t"],
-        //     "commands": ["workbench.action.gotoSymbol"]
-        // },
-        // Easymotion bindings
-        {
-            "before": ["<leader>", "f"],
-            "after": ["<leader>", "<leader>", "s"]
-        },
-        {
-            "before": ["<leader>", "s"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        // Easymotion bindings
-        {
-            "before": ["<leader>", "f"],
-            "after": ["<leader>", "<leader>", "s"]
-        },
-        {
-            "before": ["<leader>", "s"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
-        },
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false, // Move to beginning of line
-        "<C-e>": false, // Move to end of line
-        "<C-f>": false, // Move forward one character
-        "<C-b>": false, // Move backward one character
-        "<C-p>": false, // Move up one line
-        "<C-n>": false, // Move down one line
-        "<C-w>": false, // To use Ctrl+hjkl for window navigation
-    },
+    "editor.cursorSurroundingLines": 5,
+    // // Vim settings
+    // "vim.startInInsertMode": false,
+    // "vim.easymotion": true,
+    // "vim.sneak": true,
+    // "vim.incsearch": true,
+    // "vim.useSystemClipboard": true,
+    // "vim.useCtrlKeys": true,
+    // "vim.hlsearch": true,
+    // "vim.insertModeKeyBindings": [
+    //     {
+    //         "before": ["j", "j"],
+    //         "after": ["<Esc>"]
+    //     },
+    //     {
+    //         "before": ["k", "j"],
+    //         "after": ["<Esc>"]
+    //     },
+    //     {
+    //         "before": ["j", "k"],
+    //         "after": ["<Esc>"]
+    //     },
+    //     // Move the cursor in insert mode
+    //     {
+    //         "before": ["<C-h>"],
+    //         "after": ["<left>"]
+    //     },
+    //     {
+    //         "before": ["<C-j>"],
+    //         "after": ["<down>"]
+    //     },
+    //     {
+    //         "before": ["<C-k>"],
+    //         "after": ["<up>"]
+    //     },
+    //     {
+    //         "before": ["<C-l>"],
+    //         "after": ["<right>"]
+    //     },
+    // ],
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": ["<leader>", "d"],
+    //         "after": ["_", "d", "d"]
+    //     },
+    //     {
+    //         "before": ["<Esc>"],
+    //         "commands": [":noh"]
+    //     },
+    //     // Moving up and down faster in normal mode
+    //     {
+    //         "before": ["J"],
+    //         "after": ["5", "j"]
+    //     },
+    //     {
+    //         "before": ["K"],
+    //         "after": ["5", "k"]
+    //     },
+    //     // Keep joining lines
+    //     {
+    //         "before": ["<leader>", "j"],
+    //         "after": ["J"]
+    //     },
+    //     // Easier tab handling
+    //     {
+    //         "before": ["<leader>", "t", "t"],
+    //         "commands": [":tabnew"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "t", "n"],
+    //         "commands": [":tabnext"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "t", "p"],
+    //         "commands": [":tabprev"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "t", "o"],
+    //         "commands": [":tabo"]
+    //     },
+    //     // VSCode actions
+    //     {
+    //         "before": ["<leader>", "w"],
+    //         "commands": ["workbench.action.files.save"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "p"],
+    //         "commands": ["workbench.action.showCommands"]
+    //     },
+    //     // {
+    //     //     "before": ["<leader>","t"],
+    //     //     "commands": ["workbench.action.gotoSymbol"]
+    //     // },
+    //     // Easymotion bindings
+    //     {
+    //         "before": ["<leader>", "f"],
+    //         "after": ["<leader>", "<leader>", "s"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "s"],
+    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "t"],
+    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+    //     },
+    // ],
+    // "vim.visualModeKeyBindings": [
+    //     // Easymotion bindings
+    //     {
+    //         "before": ["<leader>", "f"],
+    //         "after": ["<leader>", "<leader>", "s"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "s"],
+    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "t"],
+    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+    //     },
+    // ],
+    // "vim.leader": "<space>",
+    // "vim.handleKeys": {
+    //     "<C-a>": false, // Move to beginning of line
+    //     "<C-e>": false, // Move to end of line
+    //     "<C-f>": false, // Move forward one character
+    //     "<C-b>": false, // Move backward one character
+    //     "<C-p>": false, // Move up one line
+    //     "<C-n>": false, // Move down one line
+    //     "<C-w>": false, // To use Ctrl+hjkl for window navigation
+    // },
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 2,
     "editor.guides.bracketPairs": "active",
@@ -213,7 +213,7 @@
     },
     "go.toolsManagement.autoUpdate": true,
     "files.trimFinalNewlines": true,
-    "editor.lineNumbers": "relative",
+    // "editor.lineNumbers": "relative",
     "editor.glyphMargin": true,
     "projectManager.git.baseFolders": [
         "~/dev/src/"

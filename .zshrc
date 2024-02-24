@@ -140,42 +140,34 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Paths
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-# export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
-
-
 # Aliases
 eval $(thefuck --alias)
 
-alias python=/opt/homebrew/bin/python3.12
-alias pip=/opt/homebrew/opt/python@3.12/libexec/bin/pip
+alias python=/opt/homebrew/bin/python3
+alias pip=/opt/homebrew/opt/python@3/libexec/bin/pip
 
-alias ls="exa"
-alias cat="bat"
+alias python3=/opt/homebrew/bin/python3.12
+alias pip3=/opt/homebrew/opt/python@3.12/libexec/bin/pip
+
 alias vi="nvim"
 alias vim="nvim"
-
-alias ll="ls -la"
-alias la="ls -lah"
-
-alias ..="cd .."
-alias cd..="cd .."
 
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey "ç" fzf-cd-widget
 
-# Multiple Homebrews on Apple Silicon
-if [ "$(arch)" = "arm64" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-    eval "$(/usr/local/bin/brew shellenv)"
-fi
+# # Multiple Homebrews on Apple Silicon
+# if [ "$(arch)" = "arm64" ]; then
+#     eval "$(/opt/homebrew/bin/brew shellenv)"
+# else
+#     eval "$(/usr/local/bin/brew shellenv)"
+# fi
 
