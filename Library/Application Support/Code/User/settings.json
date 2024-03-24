@@ -50,6 +50,11 @@
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
     "notebook.formatOnSave.enabled": true,
     "notebook.codeActionsOnSave": {
         "source.fixAll": true,
@@ -203,10 +208,12 @@
     //     "<C-w>": false, // To use Ctrl+hjkl for window navigation
     // },
     "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
     "editor.guides.bracketPairs": "active",
     "files.associations": {
-        "*.gohtml": "gohtml"
+        "*.gohtml": "gohtml",
+        "*.html": "html",
+        "*.css": "css"
     },
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-mac": "/Users/ve/.vs-kubernetes/tools/helm/darwin-arm64/helm"
@@ -220,4 +227,8 @@
     ],
     "workbench.tree.enableStickyScroll": true,
     "editor.stickyScroll.enabled": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.linkedEditing": true,
 }
