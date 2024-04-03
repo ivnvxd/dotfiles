@@ -24,6 +24,9 @@ Add git credentials:
 
 ```sh
 git config --global user.name "Andrey Ivanov"
+```
+
+```sh
 git config --global user.email "ivnv.xd@gmail.com"
 ```
 
@@ -88,14 +91,22 @@ Install plugins:
 
 ```sh
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+```
 
+```sh
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+```
 
+```sh
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 ```
 
-## 5.1 Setup fish shell
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+## *5.1 Setup fish shell*
 
 Add fish to the shell list:
 
@@ -144,7 +155,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ## 8. Setup Poetry
 
-Either brew or:
+Either **brew** or:
 
 ```shell
 curl -sSL https://install.python-poetry.org | python3 -
@@ -169,12 +180,21 @@ to
 
 ```sh
 chflags nohidden ~/Library  # Show Library folder
-defaults write com.apple.finder AppleShowAllFiles YES  # Show hidden files
+```
+
+```sh
+defaults write com.apple.finder AppleShowAllFiles true  # Show hidden files
+```
+
+```sh
 defaults write com.apple.finder ShowPathbar -bool true  # Show path bar
+```
+
+```sh
 defaults write com.apple.finder ShowStatusBar -bool true  # Show status bar
 ```
 
-Enable key-repeating
+Enable key-repeating:
 
 ```sh
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
@@ -191,6 +211,12 @@ defaults write com.apple.GameController bluetoothPrefsMenuLongPressAction -integ
 defaults write com.apple.GameController bluetoothPrefsShareLongPressSystemGestureMode -integer -1
 
 killall Dock
+```
+
+Add separator to Dock:
+
+```sh
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock
 ```
 
 ## 11. Setup Go
