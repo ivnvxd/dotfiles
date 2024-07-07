@@ -39,6 +39,8 @@ brew "uv"
 brew "helix"
 brew "poetry"
 brew "ruff"
+brew "flake8"
+brew "black"
 
 
 # CLI
@@ -99,7 +101,7 @@ cask "qmk-toolbox"
 cask "deepl"
 cask "imageoptim"
 cask "shottr"
-cask "syncthing"
+# cask "syncthing"
 cask "blackhole-2ch"
 cask "protonvpn"
 # cask "cakebrew"
@@ -108,6 +110,7 @@ cask "protonvpn"
 # cask "zerotier-one"
 cask "synology-drive"
 cask "synologyassistant"
+cask "resilio-sync"
 cask "1password"
 cask "bettertouchtool"
 cask "karabiner-elements"
@@ -186,7 +189,7 @@ mas "Pages", id: 409201541
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "iMovie", id: 408981434
-mas "GarageBand", id: 682658836
+# mas "GarageBand", id: 682658836
 mas "Desk Remote Control", id: 1509037746
 mas "WireGuard", id: 1451685025
 mas "Norka VPN", id: 6444030286
