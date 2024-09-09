@@ -1,0 +1,29 @@
+@media (-moz-bool-pref: "uc.tweak.af.fix") {
+  :root[titlepreface="᠎"] {
+
+    /* #sidebar-box {
+      --uc-autohide-sidebar-delay: 200ms !important;
+      --uc-autohide-transition-duration: 200ms;
+    } */
+
+    /* #sidebar-box:hover>#sidebar {
+        box-shadow: 0px 0px 0px 0px !important;
+        padding-top: 0px !important;
+    } */
+
+    #sidebar-box > #sidebar-header,
+    #sidebar-box > #sidebar {
+      transition: min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay),
+      max-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay),
+      box-shadow var(--uc-autohide-transition-duration) ease-in-out var(--uc-autohide-sidebar-delay) !important;
+    }
+
+    /* --uc-tweak-rounded-corners-padding: 3px !important; */
+
+    /* #sidebar-box {
+      &:hover {
+        opacity: 0.5 !important;
+      }
+    } */
+  }
+}

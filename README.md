@@ -78,7 +78,7 @@ Install oh-my-zsh:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Install Powerlevel10k:
+*(optional) Install Powerlevel10k:*
 
 ```sh
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k

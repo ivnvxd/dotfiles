@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
 # tap "ngrok/ngrok"
+# tap "zen-browser/browser", "https://github.com/zen-browser/desktop.git"
 
 
 # Code
@@ -11,12 +12,13 @@ brew "python"
 brew "jupyterlab"
 brew "poetry"
 brew "git"
+brew "go"
 brew "golang"
 brew "golangci-lint"
 brew "elixir"
 brew "neovim"
 cask "visual-studio-code"
-cask "visual-studio-code-insiders"
+# cask "visual-studio-code-insiders"
 cask "sublime-text"
 cask "zed"
 cask "jetbrains-toolbox"
@@ -41,6 +43,10 @@ brew "poetry"
 brew "ruff"
 brew "flake8"
 brew "black"
+brew "pre-commit"
+cask "cursor"
+cask "gitup"
+brew "numpy"
 
 
 # CLI
@@ -70,6 +76,13 @@ brew "fd"
 brew "clifm"
 brew "btop"
 brew "curl"
+brew "starship"
+brew "pygments"
+brew "eza"
+brew "zoxide"
+brew "docker-completion"
+brew "rsync"
+brew "pure"
 
 
 # Terminal
@@ -114,6 +127,9 @@ cask "resilio-sync"
 cask "1password"
 cask "bettertouchtool"
 cask "karabiner-elements"
+cask "topnotch"
+cask "aldente"
+cask "grandperspective"
 
 
 # Apps
@@ -143,7 +159,7 @@ cask "microsoft-remote-desktop"
 cask "nrlquaker-winbox"
 cask "epic-games"
 cask "nvidia-geforce-now"
-cask "cron"
+# cask "cron"
 # cask "cloudcompare"
 # cask "meshlab"
 # cask "blender"
@@ -154,6 +170,7 @@ cask "google-chrome"
 cask "chatgpt"
 # cask "notion-calendar"
 cask "logitech-options"
+# cask "zen-browser"
 
 
 # Fonts
@@ -192,7 +209,8 @@ mas "iMovie", id: 408981434
 # mas "GarageBand", id: 682658836
 mas "Desk Remote Control", id: 1509037746
 mas "WireGuard", id: 1451685025
-mas "Norka VPN", id: 6444030286
+# mas "Norka VPN", id: 6444030286
+mas "PDFgear", id: 6469021132
 
 # Safari Extensions
 mas "AdGuard for Safari", id: 1440147259
@@ -206,3 +224,84 @@ mas "PayPal Honey", id: 1472777122
 mas "Polyglot", id: 1471801525
 mas "SponsorBlock", id: 1573461917
 mas "Wipr", id: 1320666476
+mas "1Password for Safari", id: 1569813296
+mas "Save to Raindrop.io", id: 1549370672
+mas "Vimari", id: 1480933944
+
+
+# VsCode
+vscode "akamud.vscode-theme-onedark"
+vscode "akarlsten.vscode-snazzy-akarlsten"
+vscode "alefragnani.project-manager"
+vscode "andenetalexander.vim-cheatsheet"
+vscode "arcticicestudio.nord-visual-studio-code"
+vscode "batisteo.vscode-django"
+vscode "casualjim.gotemplate"
+vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
+vscode "charliermarsh.ruff"
+vscode "davidanson.vscode-markdownlint"
+vscode "dbaeumer.vscode-eslint"
+vscode "donjayamanne.python-environment-manager"
+vscode "donjayamanne.python-extension-pack"
+vscode "dracula-theme.theme-dracula"
+vscode "enkia.tokyo-night"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-close-tag"
+vscode "formulahendry.auto-rename-tag"
+vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
+vscode "github.vscode-github-actions"
+vscode "golang.go"
+vscode "jakebecker.elixir-ls"
+vscode "johnpapa.vscode-peacock"
+vscode "kevinrose.vsc-python-indent"
+vscode "kisstkondoros.vscode-gutter-preview"
+vscode "mechatroner.rainbow-csv"
+vscode "mikestead.dotenv"
+vscode "modular-mojotools.vscode-mojo"
+vscode "monokai.theme-monokai-pro-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
+vscode "ms-python.flake8"
+vscode "ms-python.isort"
+vscode "ms-python.pylint"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.remote-explorer"
+vscode "mvllow.rose-pine"
+vscode "ninoseki.vscode-pylens"
+vscode "oderwat.indent-rainbow"
+vscode "peterj.proto"
+vscode "pmndrs.pmndrs"
+vscode "redhat.vscode-yaml"
+vscode "sdras.night-owl"
+vscode "sonarsource.sonarlint-vscode"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "tamasfe.even-better-toml"
+vscode "tatsy.vscode-3d-preview"
+vscode "tomoki1207.pdf"
+vscode "usernamehw.errorlens"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscodevim.vim"
+vscode "wayou.vscode-todo-highlight"
+vscode "whizkydee.material-palenight-theme"
+vscode "wholroyd.jinja"
+vscode "zhuangtongfa.material-theme"

@@ -3,26 +3,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      colorscheme = "catppuccin-mocha",
+      -- colorscheme = "catppuccin-macchiato",
     },
   },
-
-  -- -- Disable first suggestion autoselect
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   ---@param opts cmp.ConfigSchema
-  --   opts = function(_, opts)
-  --     local cmp = require("cmp")
-  --     opts.preselect = cmp.PreselectMode.None
-  --     opts.completion = {
-  --       completeopt = "menu,menuone,noinsert,noselect",
-  --     }
-  --     opts.mapping = cmp.mapping.preset.insert(vim.tbl_deep_extend("force", opts.mapping, {
-  --       ["<CR>"] = cmp.mapping.confirm({ select = false }),
-  --       ["<S-CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
-  --     }))
-  --   end,
-  -- },
 
   -- Disable first suggestion autoselect
   -- Use <tab> for completion and snippets (supertab)
@@ -65,11 +49,11 @@ return {
         ["<Down>"] = cmp.mapping(function(fallback)
           cmp.close()
           fallback()
-        end, { "i" }),
+        end, { "i", "s" }),
         ["<Up>"] = cmp.mapping(function(fallback)
           cmp.close()
           fallback()
-        end, { "i" }),
+        end, { "i", "s" }),
 
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -154,7 +138,7 @@ return {
     end,
   },
 
-  -- -- Add copilot suggestions
+  -- -- Add copilot inline suggestions
   -- {
   --   "zbirenbaum/copilot.lua",
   --   cmd = "Copilot",
