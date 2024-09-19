@@ -50,6 +50,12 @@ ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
+Add gloabl gitignore:
+
+```sh
+git config --global core.excludesfile ~/.gitignore_global
+```
+
 ## 3. Copy dotfiles
 
 from <https://github.com/ivnvxd/dotfiles>
