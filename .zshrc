@@ -136,32 +136,57 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Paths
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
-
+# Go binaries
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# Paths
+export LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig"
+
+export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@14/lib $LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@14/include $CPPFLAGS"
+
 # Aliases
-eval $(thefuck --alias)
-
-alias python=/opt/homebrew/bin/python3
-alias pip=/opt/homebrew/opt/python@3/libexec/bin/pip
-
-alias python3=/opt/homebrew/bin/python3.12
-alias pip3=/opt/homebrew/opt/python@3.12/libexec/bin/pip
+alias ls="eza"
+alias l="ls -lahF"
 
 alias vi="nvim"
 alias vim="nvim"
-# alias fzn="nvim $(fzf --preview 'bat --style=numbers --color=always {}')"
 
-# fzf settings
-eval "$(fzf --zsh)"
-
+# Setup fzf
+source <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey "ç" fzf-cd-widget
 
+# Change fzf theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
+
+# Activate thefuck
+eval $(thefuck --alias)
+
+# Get list of paths to odoo modules for odoo-bin
+function odoom() {
+    paths=$(find "$(pwd)" -type f | grep __manifest__.py | sed s/__manifest__.py//g | sed 's,/*[^/]\+/*$,,' | sort | uniq | paste -s -d, -)
+    echo $paths
+}
+
+# Change current working directory using yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# starship prompt
 eval "$(starship init zsh)"

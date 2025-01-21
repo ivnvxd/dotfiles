@@ -50,6 +50,23 @@ ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
+### 2.1 Setup obsidian
+
+```sh
+ssh-keygen -t ed25519 -C "ivnv.xd@gmail.com"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519_obsidian
+
+cat ~/.ssh/id_ed25519_obsidian.pub
+```
+
+```sh
+git clone git@obsidian-git:ivnvxd/obsidian.git
+# or
+git remote set-url origin git@obsidian-git:ivnvxd/obsidian.git
+```
+
 Add gloabl gitignore:
 
 ```sh

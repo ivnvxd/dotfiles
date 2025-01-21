@@ -1,29 +1,41 @@
 {
   "models": [
     {
-      "model": "claude-3-5-sonnet-20240620",
-      "contextLength": 200000,
       "title": "Claude 3.5 Sonnet",
-      "apiKey": "",
-      "provider": "anthropic"
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest",
+      "apiKey": "[API_KEY]"
     },
     {
-      "model": "gpt-4o",
-      "contextLength": 128000,
+      "title": "DeepSeek-V3",
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+      "apiKey": "[API_KEY]"
+    },
+    {
       "title": "GPT-4o",
-      "systemMessage": "You are an expert software developer. You give helpful and concise responses.",
       "provider": "openai",
-      "apiKey": ""
+      "model": "gpt-4o",
+      "apiKey": "[API_KEY]"
     },
     {
-      "model": "gpt-4o-mini",
-      "contextLength": 128000,
       "title": "GPT-4o mini",
-      "systemMessage": "You are an expert software developer. You give helpful and concise responses.",
-      "apiKey": "",
-      "provider": "openai"
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "apiKey": "[API_KEY]"
     }
   ],
+  "tabAutocompleteModel": {
+    "title": "Codestral",
+    "provider": "mistral",
+    "model": "codestral-latest",
+    "apiKey": "[API_KEY]"
+  },
+  "embeddingsProvider": {
+    "provider": "voyage",
+    "model": "voyage-code-3",
+    "apiKey": "[API_KEY]"
+  },
   "customCommands": [
     {
       "name": "test",
@@ -31,12 +43,6 @@
       "description": "Write unit tests for highlighted code"
     }
   ],
-  "tabAutocompleteModel": {
-    "title": "Codestral",
-    "provider": "mistral",
-    "model": "codestral-latest",
-    "apiKey": ""
-  },
   "contextProviders": [
     {
       "name": "code",
@@ -64,6 +70,10 @@
     },
     {
       "name": "codebase",
+      "params": {}
+    },
+    {
+      "name": "open",
       "params": {}
     }
   ],
