@@ -1,0 +1,288 @@
+#root {
+  --nav-btn-height: 40px !Important;
+  --tabs-spacing: 4px; /* Spacing between the tabs, be sure to change the tab height for it to look right!) */
+  --tabs-indent: 10px !important;
+  --tabs-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  --tabs-inner-gap: 8px;
+  --nav-btn-len-margin: 2px;
+  --nav-btn-width: 44px;
+  --general-margin: 3px;
+}
+
+@media (prefers-color-scheme:light) {
+  #root {
+    --bg: #f7f6f6 !important; /* Sideberry background color (follow instruction in userChrome.css):: default: #fff  */
+    --tabs-fg: #323232 !important; /* Font color :: default: #323232 */
+    --tabs-bg-hover: #dedddaff !important; /* Tab background on hover :: default: #dedddaff */
+    --tabs-activated-bg: transparent !important; /* Active tab :: default :: transparent */
+    --tabs-activated-shadow: 0px 5px 10px rgba(0,0,0,0.15) !important; /* Active tab shadow :: default: 0px 5px 10px rgba(0,0,0,0.15); */
+    --btn-fg: #555 !important; /* Button main color :: default: #555; */
+    --nav-btn-fg: var(--btn-fg) !important; /* Nav Button main color :: default: var(--btn-fg); */
+    --border-color: rgba(0,0,0,0.1);
+  }
+}
+
+@media (prefers-color-scheme:dark) {
+  #root {
+    --bg: #2b2a33 !important;  /* Sideberry background color (follow instruction in userChrome.css):: default: #2b2a33 */
+    --tabs-fg: #fff !important; /* Font color :: default: #323232 */
+    --tabs-bg-hover: rgba(255,255,255,0.135) !important; /* Tab background on hover :: default: rgba(255,255,255,0.1) */
+    --tabs-activated-bg: var(--tabs-bg-hover) !important; /* Active tab :: default: var(--tabs-bg-hover) */
+    --tabs-activated-shadow: none !important; /* Active tab shadow :: default: none */
+    --btn-fg: #fff !important; /* Button main color :: default: #fff; */
+    --nav-btn-fg: var(--btn-fg) !important; /* Nav Button main color :: default: var(--btn-fg); */
+    --border-color: rgba(0,0,0,0.15);
+  }
+
+  /* These exist for the bookmarks panel, not changed for light schemes */
+  #root {
+    --bookmarks-folder-expanded-fg: #fff !important;
+    --bookmarks-node-title-fg: #fff !important;
+    --favicons-placeholder-bg: #fff !important;
+    --bookmarks-folder-closed-fg: #fff !important;
+    --bookmarks-folder-expanded-fg-hover: #ccc !important;
+    --bookmarks-node-title-fg-hover: #ccc !important;
+    --favicons-placeholder-bg-hover: #ccc !important;
+    --bookmarks-folder-closed-fg-hover: #ccc !important;
+  }
+}
+
+@media screen and (max-width: 60px) {
+  #root {
+    --tabs-indent: unset !important;
+  }
+
+  .container {
+      max-width: 60px;
+  }
+
+  .Tab .audio {
+    margin-left: -15px;
+    transform: scale(.80);
+    z-index: 99 !important;
+  }
+
+  .Tab[data-lvl] , .PinnedTab[data-lvl]  {
+    /* max-width: 30px; */
+    float: left;
+  }
+
+  .container {
+    margin: 0px !important;
+    max-width: 60px;
+  }
+
+  .panel-btn[data-active="true"] {
+    display: flex !important;
+    position: absolute !important;
+    background: none !important;
+  }
+
+  .panel-btn {
+    display: none !important;
+  }
+
+  .Sidebar .settings-btn {
+    display: none;
+  }
+
+  .container::after {
+    margin-left: 16px;
+  }
+}
+
+.Sidebar .panel-box {
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+.Sidebar {
+  font-family: var(--tabs-font);
+}
+
+.container {
+  padding-top: 2.5px !important;
+  margin: 0 auto !important;
+  max-width: calc(100% - 20px);
+}
+
+.NavigationBar {
+  padding-left: 8px;
+}
+
+/* .Sidebar .settings-btn {
+} */
+
+/* Reset default styles */
+.Tab[data-active], .Tab:hover, .PinnedTab[data-active], .PinnedTab:hover {
+  background-color: transparent;
+  box-shadow: none !Important;
+}
+
+.Tab[data-active] .lvl-wrapper:after, .PinnedTab[data-active] {
+  background-color: var(--tabs-activated-bg);
+}
+
+/* Style for Tabs and Pinned Tabs */
+.Tab .lvl-wrapper:after, .PinnedTab {
+  border-radius: 5px;
+  border: 1px solid transparent !important;
+  border-radius: 5px;
+  text-align: left;
+  transition: width 0.1s !Important;
+}
+
+/* Background layer for tabs */
+.Tab .lvl-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  margin: var(--tabs-spacing) 0;
+  width: calc(100% - 4px);
+  height: calc(100% - calc(var(--tabs-spacing) * 2));
+  z-index: -1;
+}
+
+/* Style for pinned tabs */
+.PinnedTab {
+  height: calc(var(--tabs-height) - calc(var(--tabs-spacing) * 2)) !important;
+  margin: var(--tabs-spacing) 10px;
+}
+
+.Tab {
+  border-radius: 5px;
+}
+
+.Tab[data-active] .lvl-wrapper:after, .PinnedTab[data-active] {
+  box-shadow: var(--tabs-activated-shadow) !important;
+}
+
+.Tab:hover .lvl-wrapper:after, .PinnedTab:hover {
+  background: var(--tabs-bg-hover);
+}
+
+.Tab[data-active]:hover .lvl-wrapper:after {
+  box-shadow: none !Important;
+}
+
+/*  Favicon Settings */
+.Tab .fav, .PinnedTab .fav {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0 6px 0 7px;
+  opacity: 1 !important;
+  left: 5px;
+}
+
+.Tab .placeholder > svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--btn-fg);
+}
+
+.PinnedTab  .fav {
+  margin-left: 4px;
+}
+
+.Tab:hover  .fav, .PinnedTab:hover  fav {
+    opacity: 1 !important;
+}
+
+.Tab  .placeholder, .PinnedTab . placeholder {
+
+}
+
+/* Internal Tab Settings */
+.Tab  .t-box, .PinnedTab  .title {
+  mask: linear-gradient(-90deg,transparent,#000 25px,#000);
+  /*! display: none; */
+}
+
+.Tab  .t-box .title, .PinnedTab  .title {
+  padding-left: 4px;
+  font-family: var(--tabs-font) !important;
+  color: var(--tabs-fg);
+}
+
+/* Tab Close and Context Buttons */
+.Tab  .close {
+  fill: var(--btn-fg);
+}
+
+.Tab  .close > svg {
+  fill: var(--btn-fg);
+  background: none;
+  opacity: 1;
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.Tab  .close > svg:hover {
+  background: rgba(0,0,0,0.075);
+  border-radius: 4px;
+}
+
+.PinnedTab  .close {
+  display: none !important;
+}
+
+.Tab  .ctx,
+PinnedTab  .ctx {
+  top: 4px;
+  right: auto;
+  left: -11px;
+  width: 4px;
+  height: calc(100% - 5px);
+}
+
+.Sidebar {
+  margin-top: -2.5px;
+}
+
+.PinnedDock {
+  padding-top: 2.5px !important;
+  padding-bottom: 2 !important;
+  margin-bottom: -2.5px;
+}
+
+.PinnedDock::after {
+    display: none !important;
+}
+
+.Sidebar .panel-btn > svg, .Sidebar .panel-btn > img, .HiddenPanelsBar .hidden-panel > img, .HiddenPanelsBar .hidden-panel > svg {
+  fill: var(--nav-btn-fg) !important;
+}
+
+.Sidebar .panel-btn .len {
+  top: 6px !important;
+}
+
+.audio {
+  position: absolute;
+  margin-left: -14px;
+  margin-top: 7px;
+  z-index: 99;
+
+}
+
+.audio svg {
+  padding: 3px;
+  height: 14px !important;
+  width: 14px !important;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+  background: #000;
+  z-index: 999;
+}
+
+.Tab[data-audible]  .t-box, .Tab[data-muted] .t-box {
+  transform: none !important;
+}
+
+/*
+.PinnedTabsBar {
+  flex-wrap: nowrap!important;
+} */

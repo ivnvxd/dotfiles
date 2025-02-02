@@ -2,31 +2,34 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-set -gx PATH $HOME/.local/bin $PATH  # Local binaries
-set -gx PATH /usr/local/bin /usr/local/sbin $PATH  # Homebrew
-set -gx PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH  # M1 Mac homebrew
-set -gx PATH ~/bin $PATH  # Custom scripts
-
-set -gx GOPATH $HOME/go  # Go path
-set -gx PATH $GOPATH/bin $PATH  # Go binaries
-
-# Activate thefuck
-thefuck --alias | source
+# Paths
+set -gx GOPATH $HOME/go # Go path
+set -gx PATH $GOPATH/bin $PATH # Go binaries
 
 # Aliases
-alias ls='exa'
-alias cat='bat'
+alias ls='eza'
+alias l='ls -lahF'
+
 alias vi='nvim'
 alias vim='nvim'
 
-alias ll='ls -la'
-alias la='ls -lah'
-
 alias ..='cd ..'
+alias ...='cd ../..'
 alias cd..='cd ..'
 
-bind -M insert "ç" fzf-cd-widget
+# Setup fzf
+fzf --fish | source
+bind -M insert ç fzf-cd-widget
 
+# Change fzf theme
+set -Ux FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
+
+# Update all
 function update -d "update brew, fish, fisher and mac app store"
     echo 'Start updating ...'
 
@@ -45,3 +48,25 @@ function update -d "update brew, fish, fisher and mac app store"
     echo 'All updates completed!'
     exit 0
 end
+
+# Change current working directory using yazi
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
+# Thefuck
+thefuck --alias | source
+
+# Starship Prompt
+starship init fish | source
+
+# Zoxide
+zoxide init fish | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/ve/.lmstudio/bin

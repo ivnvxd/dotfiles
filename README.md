@@ -132,10 +132,10 @@ chsh -s $(which fish)
 set-option -g default-shell "/opt/homebrew/bin/fish"
 ```
 
-Install fish `pure` theme:
+Set theme:
 
 ```sh
-fisher install rafaelrinaldi/pure
+fish_config theme save "Catppuccin Mocha"
 ```
 
 ## 6. Setup tmux

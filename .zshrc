@@ -1,23 +1,14 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -81,25 +72,25 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   aliases
-	brew
-	colored-man-pages
-	colorize
-	common-aliases
-	cp
+  brew
+  colored-man-pages
+  colorize
+  common-aliases
+  cp
   docker
-	fast-syntax-highlighting
-	git
+  fast-syntax-highlighting
+  git
   golang
   node
   npm
   pip
   python
   rsync
-	sudo
+  sudo
   tmux
   web-search
-	z
-	zsh-autosuggestions
+  z
+  zsh-autosuggestions
   zsh-history-substring-search
 )
 
@@ -118,50 +109,63 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Paths
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
-
+# Go binaries
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # Aliases
-eval $(thefuck --alias)
-
-alias python=/opt/homebrew/bin/python3
-alias pip=/opt/homebrew/opt/python@3/libexec/bin/pip
-
-alias python3=/opt/homebrew/bin/python3.12
-alias pip3=/opt/homebrew/opt/python@3.12/libexec/bin/pip
+alias ls="eza"
+alias l="ls -lahF"
 
 alias vi="nvim"
 alias vim="nvim"
-# alias fzn="nvim $(fzf --preview 'bat --style=numbers --color=always {}')"
 
-# fzf settings
-eval "$(fzf --zsh)"
-
+# Setup fzf
+source <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey "ç" fzf-cd-widget
 
+# Change fzf theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
+
+# Activate thefuck
+eval $(thefuck --alias)
+
+# Change current working directory using yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# starship prompt
 eval "$(starship init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ve/.lmstudio/bin"

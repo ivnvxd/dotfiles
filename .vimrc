@@ -165,6 +165,8 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+" To use fzf in Vim
+set rtp+=/opt/homebrew/opt/fzf
 
 " PLUGINS ----------------------------------------------------------------------
 
