@@ -7,35 +7,38 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "theme": "Catppuccin Mocha",
-  // "theme": "Dracula",
-  "buffer_font_family": "Monaspace Argon",
+  "icon_theme": "Catppuccin Mocha",
+  "base_keymap": "JetBrains",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "buffer_font_family": "MonoLisa",
   "buffer_font_size": 13,
   "ui_font_size": 14,
-  "terminal": {
-    "font_family": "MesloLGS Nerd Font Mono",
-    "font_size": 13,
-    "line_height": "standard"
-  },
   "inlay_hints": {
-    "enabled": true
+    // "enabled": true
+  },
+  "project_panel": {
+    "entry_spacing": "standard",
+    "indent_size": 15
+  },
+  // "autosave": "on_focus_change",
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
   },
   "soft_wrap": "editor_width",
-  "tabs": {
-    "git_status": true
-  },
-  "language_overrides": {
-    "Python": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "bash",
-          "arguments": [
-            "-c",
-            "ruff check --exit-zero --fix --unsafe-fixes --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
-          ]
-        }
-      }
-    }
+  "terminal": {
+    "font_family": "Hack Nerd Font Mono",
+    "font_size": 13,
+    "line_height": "standard"
   }
 }
