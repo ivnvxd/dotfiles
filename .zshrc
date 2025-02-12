@@ -164,8 +164,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Forcing prompt_toolkit to use true color
+export PROMPT_TOOLKIT_COLOR_DEPTH=DEPTH_24_BIT
+
 # starship prompt
 eval "$(starship init zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/ve/.lmstudio/bin"
