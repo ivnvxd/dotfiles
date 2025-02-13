@@ -23,9 +23,10 @@
   "buffer_font_family": "MonoLisa",
   "buffer_font_size": 13,
   "ui_font_size": 14,
-  "inlay_hints": {
-    // "enabled": true
-  },
+  "vim_mode": true,
+  // "inlay_hints": {
+  //   "enabled": true
+  // },
   "project_panel": {
     "entry_spacing": "standard",
     "indent_size": 15

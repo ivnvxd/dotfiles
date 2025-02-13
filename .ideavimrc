@@ -1,0 +1,54 @@
+""" Map leader to space ---------------------
+map <space> <nop>
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set easymotion                  " Quick motion navigation using letter hints
+                                " <leader>f followed by character to jump
+set sneak                       " Jump to any location specified by two characters
+set NERDTree                    " File system explorer for Vim
+set surround                    " Easily delete, change, and add surroundings (parentheses, quotes, etc.)
+                                " ys[motion][char] to add surroundings, ds[char] to delete
+set multiple-cursors            " Sublime Text style multiple selections
+                                " <A-n> to select next occurrence, <A-x> to skip
+set commentary                  " Comment/uncomment lines using 'gc' command
+                                " gcc to comment/uncomment line, gc in visual mode
+set argtextobj                  " Text object for function arguments (enables 'a' text object)
+                                " daa to delete an argument including comma, dia for just the argument
+set textobj-entire              " Adds text object for entire buffer (ae/ie)
+set highlightedyank             " Briefly highlight yanked text
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"    " Define argument pairs for argtextobj plugin
+                                        " [:] for arrays, (:) for functions, <:> for generics
+
+""" Common settings -------------------------
+set showmode                    " Shows current mode (INSERT/NORMAL/VISUAL) in status line
+set so=5                        " Keep 5 lines above/below cursor when scrolling
+set incsearch                   " Show search matches as you type
+set ignorecase                  " Ignore case in search patterns
+set smartcase                   " Override 'ignorecase' when pattern has upper case characters
+set showmatch                   " Show matching words during a search.
+set hlsearch                    " Use highlighting when doing a search.
+set nu                          " Show line numbers
+set clipboard+=ideaput          " Use IDE's paste action instead of vim's paste
+set clipboard+=unnamed          " Yanks go to system clipboard (*)
+set relativenumber              " Show relative line numbers from cursor position
+
+""" Idea specific settings ------------------
+set ideajoin                    " Use IDE's join action which is smarter about whitespace
+set ideastatusicon=gray         " Set the IDE's vim emulation icon to gray
+set idearefactormode=keep       " Keep selection after refactoring
+
+""" Mappings --------------------------------
+inoremap kj <Esc>
+inoremap jk <Esc>
+
+" Easymotion
+map <leader>f <Plug>(easymotion-bd-f)
+map <leader>s <Plug>(easymotion-bd-jk)
+map <leader>t <Plug>(easymotion-bd-t)
+
+" Indentation
+map <Tab> <Action>(EditorIndentLineOrSelection)
+map <S-Tab> <Action>(EditorUnindentSelection)

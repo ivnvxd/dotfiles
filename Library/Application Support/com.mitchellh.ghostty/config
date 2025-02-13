@@ -2,7 +2,7 @@ theme = catppuccin-mocha
 background-opacity = 0.95
 unfocused-split-opacity = 0.6
 background-blur-radius = 15
-minimum-contrast = 1.5
+#minimum-contrast = 1.5
 window-save-state = always
 window-decoration = true
 window-padding-x = 3
@@ -15,12 +15,12 @@ window-vsync = true
 font-family = Hack Nerd Font Mono
 font-style = Regular
 font-size = 13
-font-thicken = true
+#font-thicken = true
 bold-is-bright = true
 
 shell-integration = detect
 shell-integration-features = no-cursor
-# shell-integration-features = cursor,sudo,title
+#shell-integration-features = cursor,sudo,title
 cursor-style = block
 cursor-style-blink = true
 cursor-opacity = 0.8
@@ -33,7 +33,7 @@ macos-option-as-alt = false
 
 keybind = alt+\=new_split:right
 keybind = alt+-=new_split:down
-# keybind = alt+backspace=close_surface
+#keybind = alt+backspace=close_surface
 keybind = cmd+backspace=esc:w
 
 keybind = alt+h=goto_split:left
