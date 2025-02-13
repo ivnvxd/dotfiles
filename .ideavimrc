@@ -52,3 +52,6 @@ map <leader>t <Plug>(easymotion-bd-t)
 " Indentation
 map <Tab> <Action>(EditorIndentLineOrSelection)
 map <S-Tab> <Action>(EditorUnindentSelection)
+
+" Remove search highlight
+nnoremap <esc> :noh<CR><esc>

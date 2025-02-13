@@ -24,6 +24,7 @@
   "buffer_font_size": 13,
   "ui_font_size": 14,
   "vim_mode": true,
+  "relative_line_numbers": true,
   // "inlay_hints": {
   //   "enabled": true
   // },
