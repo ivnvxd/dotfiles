@@ -79,3 +79,8 @@ $RECYCLE.BIN/
 .aider*
 !.aider.conf.yml
 !.aiderignore
+
+# Cursor
+.cursor/
+.cursorrules
+
