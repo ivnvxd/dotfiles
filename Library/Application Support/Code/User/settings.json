@@ -1,234 +1,195 @@
 {
-    "diffEditor.ignoreTrimWhitespace": false,
+    // Editor & UI
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Monaspace Argon, Monolisa, Fira Code, JetBrains Mono, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": "active",
+    "editor.inlineSuggest.enabled": true,
+    "editor.cursorSurroundingLines": 5,
+    "editor.stickyScroll.enabled": true,
+    "editor.linkedEditing": true,
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.activityBar.orientation": "vertical",
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    "explorer.confirmDelete": false,
+
+    // Git
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    "explorer.confirmDelete": false,
-    "editor.guides.indentation": false,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "editor.wordWrap": "on",
-    // "editor.rulers": [
-    //     88,
-    //     120
-    // ],
-    "editor.minimap.enabled": true,
-    // "editor.fontLigatures": true,
-    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
-    "editor.fontFamily": "Monaspace Argon, Monolisa, Fira Code, JetBrains Mono, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 13,
-    // "editor.fontWeight": "normal",
-    "redhat.telemetry.enabled": false,
-    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "projectManager.git.baseFolders": ["~/dev/src/"],
+
+    // Terminal
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.integrated.fontSize": 13,
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
-    "editor.inlineSuggest.enabled": true,
+
+    // Formatting
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
     "files.trimTrailingWhitespace": true,
-    // "editor.formatOnSave": true,
+    "files.trimFinalNewlines": true,
+
     "[python]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            // "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        },
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "[go]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
         "editor.defaultFormatter": "golang.go"
-    },
-    "[elixir]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        },
-        // "editor.defaultFormatter": "elixir-lsp.elixir-ls"
     },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "[javascript]": {
-        "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.tabWidth": 4,
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true,
-    },
-    // "[python]": {
-    //     "editor.defaultFormatter": "ms-python.black-formatter",
-    //     "editor.formatOnSave": false,
-    //     "editor.codeActionsOnSave": {
-    //         "source.organizeImports": "explicit"
-    //     }
-    // },
-    // "isort.args":["--profile", "black"],
-    "github.copilot.advanced": {},
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": true,
-        "markdown": true,
-        "scminput": false
-    },
-    "editor.cursorSurroundingLines": 5,
-    // // Vim settings
-    // "vim.startInInsertMode": false,
-    // "vim.easymotion": true,
-    // "vim.sneak": true,
-    // "vim.incsearch": true,
-    // "vim.useSystemClipboard": true,
-    // "vim.useCtrlKeys": true,
-    // "vim.hlsearch": true,
-    // "vim.insertModeKeyBindings": [
-    //     {
-    //         "before": ["j", "j"],
-    //         "after": ["<Esc>"]
-    //     },
-    //     {
-    //         "before": ["k", "j"],
-    //         "after": ["<Esc>"]
-    //     },
-    //     {
-    //         "before": ["j", "k"],
-    //         "after": ["<Esc>"]
-    //     },
-    //     // Move the cursor in insert mode
-    //     {
-    //         "before": ["<C-h>"],
-    //         "after": ["<left>"]
-    //     },
-    //     {
-    //         "before": ["<C-j>"],
-    //         "after": ["<down>"]
-    //     },
-    //     {
-    //         "before": ["<C-k>"],
-    //         "after": ["<up>"]
-    //     },
-    //     {
-    //         "before": ["<C-l>"],
-    //         "after": ["<right>"]
-    //     },
-    // ],
-    // "vim.normalModeKeyBindingsNonRecursive": [
-    //     {
-    //         "before": ["<leader>", "d"],
-    //         "after": ["_", "d", "d"]
-    //     },
-    //     {
-    //         "before": ["<Esc>"],
-    //         "commands": [":noh"]
-    //     },
-    //     // Moving up and down faster in normal mode
-    //     {
-    //         "before": ["J"],
-    //         "after": ["5", "j"]
-    //     },
-    //     {
-    //         "before": ["K"],
-    //         "after": ["5", "k"]
-    //     },
-    //     // Keep joining lines
-    //     {
-    //         "before": ["<leader>", "j"],
-    //         "after": ["J"]
-    //     },
-    //     // Easier tab handling
-    //     {
-    //         "before": ["<leader>", "t", "t"],
-    //         "commands": [":tabnew"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "t", "n"],
-    //         "commands": [":tabnext"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "t", "p"],
-    //         "commands": [":tabprev"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "t", "o"],
-    //         "commands": [":tabo"]
-    //     },
-    //     // VSCode actions
-    //     {
-    //         "before": ["<leader>", "w"],
-    //         "commands": ["workbench.action.files.save"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "p"],
-    //         "commands": ["workbench.action.showCommands"]
-    //     },
-    //     // {
-    //     //     "before": ["<leader>","t"],
-    //     //     "commands": ["workbench.action.gotoSymbol"]
-    //     // },
-    //     // Easymotion bindings
-    //     {
-    //         "before": ["<leader>", "f"],
-    //         "after": ["<leader>", "<leader>", "s"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "s"],
-    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "t"],
-    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
-    //     },
-    // ],
-    // "vim.visualModeKeyBindings": [
-    //     // Easymotion bindings
-    //     {
-    //         "before": ["<leader>", "f"],
-    //         "after": ["<leader>", "<leader>", "s"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "s"],
-    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
-    //     },
-    //     {
-    //         "before": ["<leader>", "t"],
-    //         "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
-    //     },
-    // ],
-    // "vim.leader": "<space>",
-    // "vim.handleKeys": {
-    //     "<C-a>": false, // Move to beginning of line
-    //     "<C-e>": false, // Move to end of line
-    //     "<C-f>": false, // Move forward one character
-    //     "<C-b>": false, // Move backward one character
-    //     "<C-p>": false, // Move up one line
-    //     "<C-n>": false, // Move down one line
-    //     "<C-w>": false, // To use Ctrl+hjkl for window navigation
-    // },
-    "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 1,
-    "editor.guides.bracketPairs": "active",
-    "files.associations": {
-        "*.gohtml": "gohtml",
-        "*.html": "html",
-        "*.css": "css"
-    },
-    "vs-kubernetes": {
-        "vscode-kubernetes.helm-path-mac": "/Users/ve/.vs-kubernetes/tools/helm/darwin-arm64/helm"
-    },
-    "go.toolsManagement.autoUpdate": true,
-    "files.trimFinalNewlines": true,
-    // "editor.lineNumbers": "relative",
-    "editor.glyphMargin": true,
-    "projectManager.git.baseFolders": [
-        "~/dev/src/"
-    ],
-    "workbench.tree.enableStickyScroll": true,
-    "editor.stickyScroll.enabled": true,
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.linkedEditing": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+
+    // Vim
+    "vim.startInInsertMode": false,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+
+    // Vim Status Bar
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.commandlineinprogress": ["#FAB387", "#1e1e2e"],
+    "vim.statusBarColors.easymotioninputmode": ["#FAB387", "#1e1e2e"],
+    "vim.statusBarColors.easymotionmode": ["#FAB387", "#1e1e2e"],
+    "vim.statusBarColors.insert": ["#89B4FA", "#1e1e2e"],
+    "vim.statusBarColors.normal": ["#101019", "#cdd6f4"],
+    "vim.statusBarColors.replace": ["#F38BA8", "#1e1e2e"],
+    "vim.statusBarColors.searchinprogressmode": ["#FAB387", "#1e1e2e"],
+    "vim.statusBarColors.surroundinputmode": ["#FAB387", "#1e1e2e"],
+    "vim.statusBarColors.visual": ["#cba6f7", "#1e1e2e"],
+    "vim.statusBarColors.visualblock": ["#f9e2af", "#1e1e2e"],
+    "vim.statusBarColors.visualline": ["#74c7ec", "#1e1e2e"],
+
+    // Vim keybindings
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+        // Outdent line
+        {
+            "before": ["<S-tab>"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "d"],
+            "after": ["_", "d", "d"]
+        },
+        {
+            "before": ["<Esc>"],
+            "commands": [":noh"]
+        },
+        // Easymotion bindings
+        {
+            "before": ["<leader>", "f"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["<leader>", "s"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+        },
+        // Indent lines
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<S-tab>"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Easymotion bindings
+        {
+            "before": ["<leader>", "f"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["<leader>", "s"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "t"]
+        },
+        // Indent lines
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<S-tab>"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.handleKeys": {
+        // "<C-a>": false, // Move to beginning of line
+        // "<C-e>": false, // Move to end of line
+        // "<C-f>": false, // Move forward one character
+        // "<C-w>": false, // To use Ctrl+hjkl for window navigation
+        // "<C-b>": false, // Move backward one character
+        // "<C-p>": false, // Move up one line
+        // "<C-n>": false, // Move down one line
+    },
+
+    // Extensions
+    "prettier.tabWidth": 4,
+    "go.toolsManagement.autoUpdate": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-mac": "/Users/ve/.vs-kubernetes/tools/helm/darwin-arm64/helm"
+    },
+    "redhat.telemetry.enabled": false,
+    "cursor.cpp.disabledLanguages": ["scminput"],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#101019",
+        "statusBar.noFolderBackground": "#101019",
+        "statusBar.debuigingBackground": "#101019",
+        "statusBar.foreground": "#cdd6f4",
+        "statusBar.debuggingForeground": "#cdd6f4",
+        "statusBar.debuggingBackground": "#101019"
+    }
 }

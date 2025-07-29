@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cat extensions.txt | while read extension || [[ -n $extension ]];
+cat vscode_extensions.txt | while read extension || [[ -n $extension ]];
 do
     code --install-extension $extension --force
 done

@@ -1,55 +1,13 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-
-// Ensure that tab button works in vim.
-    // {
-    //     "key": "tab",
-    //     "command": "tab",
-    //     "when": "editorTextFocus && !editorTabMovesFocus"
-    // },
-    // {
-    //     "key": "shift+tab",
-    //     "command": "outdent",
-    //     "when": "editorTextFocus && !editorTabMovesFocus"
-    // },
-
-// Commit inline suggestions with tab if tab button for vim is enabled.
-    // {
-    //     "key": "tab",
-    //     "command": "editor.action.inlineSuggest.commit",
-    //     "when": "textInputFocus && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
-    // },
-
-// Switch between splits in Vim normal mode
-    // {
-    //     "key": "ctrl+h",
-    //     "command": "workbench.action.navigateLeft",
-    //     "when": "vim.mode == Normal && vim.use<C-w> == false"
-    // },
-    // {
-    //     "key": "ctrl+j",
-    //     "command": "workbench.action.navigateDown",
-    //     "when": "vim.mode == Normal && vim.use<C-w> == false"
-    // },
-    // {
-    //     "key": "ctrl+k",
-    //     "command": "workbench.action.navigateUp",
-    //     "when": "vim.mode == Normal && vim.use<C-w> == false"
-    // },
-    // {
-    //     "key": "ctrl+l",
-    //     "command": "workbench.action.navigateRight",
-    //     "when": "vim.mode == Normal && vim.use<C-w> == false"
-    // },
-
-// Add partial suggestions.
+    // Add partial suggestions.
     {
         "key": "alt+ctrl+l",
         "command": "editor.action.inlineSuggest.acceptNextWord",
-        "when": "inlineSuggestionVisible",
+        "when": "inlineSuggestionVisible"
     },
 
-// Traverse VSCode IntelliSense suggestions with vim keybindings.
+    // Traverse VSCode IntelliSense suggestions with vim keybindings.
     {
         "key": "alt+j",
         "command": "selectNextSuggestion",
@@ -61,7 +19,7 @@
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
 
-// Switch between tabs.
+    // Switch between tabs.
     {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
@@ -71,7 +29,7 @@
         "command": "workbench.action.previousEditor"
     },
 
-// Toggle terminal.
+    // Toggle terminal.
     {
         "key": "ctrl+`",
         "command": "workbench.action.terminal.toggleTerminal"
@@ -81,26 +39,8 @@
         "command": "workbench.action.togglePanel"
     },
 
-// Switch between splits
+    // Switch between splits
     {
-        "key": "shift+alt+cmd+left",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "shift+alt+cmd+right",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "shift+alt+cmd+up",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "shift+alt+cmd+down",
-        "command": "workbench.action.navigateDown"
-    },
-
-// Switch between splits
-{
         "key": "alt+h",
         "command": "workbench.action.navigateLeft"
     },
@@ -115,5 +55,5 @@
     {
         "key": "alt+l",
         "command": "workbench.action.navigateRight"
-    },
+    }
 ]

@@ -74,7 +74,7 @@ plugins=(
   aliases
   brew
   colored-man-pages
-  colorize
+  # colorize
   common-aliases
   cp
   docker
@@ -88,7 +88,7 @@ plugins=(
   rsync
   sudo
   tmux
-  web-search
+  # web-search
   z
   zsh-autosuggestions
   zsh-history-substring-search
@@ -127,9 +127,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Go binaries
+# Variables
+export LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig"
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@17/lib $LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@17/include $CPPFLAGS"
+
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/python@3.13/libexec/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Aliases
 alias ls="eza"
@@ -137,6 +151,8 @@ alias l="ls -lahF"
 
 alias vi="nvim"
 alias vim="nvim"
+
+alias cat="bat"
 
 # Setup fzf
 source <(fzf --zsh)
@@ -154,6 +170,9 @@ export FZF_DEFAULT_OPTS=" \
 # Activate thefuck
 eval $(thefuck --alias)
 
+# Add completion for uv
+eval "$(uv generate-shell-completion zsh)"
+
 # Change current working directory using yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -164,8 +183,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Forcing prompt_toolkit to use true color
-export PROMPT_TOOLKIT_COLOR_DEPTH=DEPTH_24_BIT
-
 # starship prompt
 eval "$(starship init zsh)"
+
+# Forcing prompt_toolkit to use true color
+export PROMPT_TOOLKIT_COLOR_DEPTH=DEPTH_24_BIT
