@@ -79,3 +79,14 @@ $RECYCLE.BIN/
 .aider*
 !.aider.conf.yml
 !.aiderignore
+
+# Cursor
+.cursor/
+.cursorrules
+
+# Roo Code
+.roo
+
+# Claude Code
+.claude
+CLAUDE.md

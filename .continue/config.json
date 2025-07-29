@@ -13,6 +13,14 @@
       "apiKey": "[API_KEY]"
     },
     {
+      "title": "DeepSeek-R1",
+      "provider": "openai",
+      "model": "deepseek-reasoner",
+      "apiKey": "[API_KEY]",
+      "apiBase": "https://api.deepseek.com",
+      "completionOptions": {}
+    },
+    {
       "title": "GPT-4o",
       "provider": "openai",
       "model": "gpt-4o",
@@ -31,9 +39,14 @@
     "model": "codestral-latest",
     "apiKey": "[API_KEY]"
   },
+  // "embeddingsProvider": {
+  //   "provider": "voyage",
+  //   "model": "voyage-code-3",
+  //   "apiKey": "[API_KEY]"
+  // },
   "embeddingsProvider": {
-    "provider": "voyage",
-    "model": "voyage-code-3",
+    "provider": "gemini",
+    "model": "models/text-embedding-004",
     "apiKey": "[API_KEY]"
   },
   "customCommands": [

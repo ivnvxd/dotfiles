@@ -1,11 +1,8 @@
 ### Taps ###
 
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 # tap "ngrok/ngrok"
-# tap "zen-browser/browser", "https://github.com/zen-browser/desktop.git"
 
 
 ### Code ###
@@ -13,45 +10,49 @@ tap "homebrew/services"
 brew "aider"
 # brew "black"
 brew "cmake"
-# brew "elixir"
+brew "claude-code"
+brew "codex"
+brew "elixir"
 # brew "flake8"
+brew "gemini-cli"
 brew "git"
-# brew "go"
-# brew "golangci-lint"
+brew "go"
+brew "golangci-lint"
 # brew "helix"
-# brew "ipython"
+brew "ipython"
 brew "jupyterlab"
 brew "neovim"
-# brew "node"
+brew "node"
 # brew "numpy"
-# brew "podman"
-brew "postgresql@14"
-# brew "poetry"
+brew "podman"
+brew "postgresql@17"
+brew "poetry"
 # brew "pre-commit"
-# brew "python"
+brew "python"
 # brew "python@3.10"
 # brew "python@3.11"
 # brew "python@3.12"
 # brew "python@3.13"
 brew "ruff"
 brew "uv"
-cask "cursor"
+# cask "cursor"
 cask "dbeaver-community"
 cask "docker"
 cask "fork"
 # cask "github"
-cask "gitup"
+# cask "gitup"
 cask "jetbrains-toolbox"
 cask "pgadmin4"
 cask "postman"
 # cask "podman-desktop"
-# cask "mongodb-compass"
+cask "mongodb-compass"
 cask "pycharm"
-cask "sublime-merge"
-cask "sublime-text"
+# cask "sublime-merge"
+# cask "sublime-text"
 cask "visual-studio-code"
 # cask "visual-studio-code-insiders"
 cask "zed"
+# cask "zed@preview"
 
 
 ### CLI ###
@@ -77,7 +78,7 @@ brew "lazydocker"
 brew "lazygit"
 brew "mas"
 brew "minikube"
-brew "neofetch"
+brew "ollama"
 brew "protobuf"
 brew "pure"
 brew "pygments"
@@ -86,17 +87,19 @@ brew "rsync"
 brew "starship"
 brew "telnet"
 brew "thefuck"
-brew "tldr"
 brew "tree"
 brew "wget"
 brew "wkhtmltopdf"
+brew "yazi"
 brew "z"
 brew "zoxide"
 
 ### Terminal ###
 
-# brew "fish"
-# brew "fisher"
+### Terminal ###
+
+brew "fish"
+brew "fisher"
 brew "tmux"
 # brew "zellij"
 brew "zsh-autosuggestions"
@@ -108,10 +111,13 @@ cask "ghostty"
 
 ### Tools ###
 
+### Tools ###
+
 cask "1password"
 cask "aldente"
 cask "appcleaner"
-# cask "balenaetcher"
+cask "balenaetcher"
+cask "betterdisplay"
 cask "bettertouchtool"
 # cask "bitwarden"
 # cask "blackhole-2ch"
@@ -128,64 +134,66 @@ cask "keka"
 # cask "little-snitch"
 cask "mos"
 # cask "ngrok"
-# cask "protonvpn"
+cask "protonvpn"
 cask "qmk-toolbox"
 cask "raycast"
 cask "rectangle-pro"
 # cask "resilio-sync"
 cask "shortcat"
 cask "shottr"
-# cask "syncalicious"
 # cask "syncthing"
 cask "synology-drive"
-# cask "synologyassistant"
+cask "synologyassistant"
 # cask "termius"
-# cask "topnotch"
-# cask "whisky"
+cask "topnotch"
 # cask "zerotier-one"
+cask "tunnelblick"
+
+### Apps ###
 
 ### Apps ###
 
 cask "adobe-acrobat-reader"
 # cask "anydesk"
-cask "arc"
+# cask "arc"
 # cask "blender"
-# cask "calibre"
+cask "calibre"
 cask "chatgpt"
 cask "claude"
 # cask "cloudcompare"
 # cask "cron"
-# cask "discord"
-# cask "epic-games"
+cask "cursor"
+cask "discord"
+cask "epic-games"
 # cask "figma"
-cask "firefox"
+# cask "firefox"
 cask "firefox@nightly"
 cask "google-chrome"
 cask "iina"
 cask "logitech-options"
+cask "lulu"
 cask "marta"
 # cask "meshlab"
-# cask "microsoft-remote-desktop"
 # cask "microsoft-teams"
 cask "miro"
+cask "msty"
 cask "notion"
 # cask "notion-calendar"
-# cask "nrlquaker-winbox"
-# cask "nvidia-geforce-now"
+cask "nrlquaker-winbox"
+cask "nvidia-geforce-now"
 cask "obsidian"
-# cask "skype"
 # cask "slack"
 cask "spotify"
-# cask "steam"
+cask "steam"
 # cask "teamviewer"
-# cask "telegram"
+cask "telegram"
 # cask "tigervnc-viewer"
 # cask "todoist"
-# cask "transmission"
-# cask "vlc"
-# cask "whatsapp"
-# cask "zen-browser"
-# cask "zoom"
+cask "transmission"
+cask "vlc"
+cask "whatsapp"
+cask "zen-browser"
+cask "zoom"
 
 
 ### Fonts ###
@@ -215,8 +223,11 @@ cask "font-ubuntu-mono-nerd-font"
 
 ### App Store ###
 
+### App Store ###
+
 mas "Amphetamine", id: 937984704
-# mas "Desk Remote Control", id: 1509037746
+mas "Desk Remote Control", id: 1509037746
+mas "FoXray", id: 6448898396
 # mas "GarageBand", id: 682658836
 # mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -226,6 +237,7 @@ mas "PDFgear", id: 6469021132
 # mas "The Unarchiver", id: 425424353
 mas "WireGuard", id: 1451685025
 
+
 ### Safari Extensions ###
 
 mas "1Password for Safari", id: 1569813296
@@ -233,12 +245,12 @@ mas "AdGuard for Safari", id: 1440147259
 # mas "Bitwarden", id: 1352778147
 mas "Consent-O-Matic", id: 1606897889
 # mas "DuckDuckGo Privacy for Safari", id: 1482920575
-# mas "Hush", id: 1544743900
+mas "Hush", id: 1544743900
 # mas "Noir", id: 1592917505
-# mas "PayPal Honey", id: 1472777122
+mas "PayPal Honey", id: 1472777122
 # mas "Polyglot", id: 1471801525
-mas "Save to Pocket", id: 1477385213
+# mas "Save to Pocket", id: 1477385213
 mas "Save to Raindrop.io", id: 1549370672
 mas "SponsorBlock", id: 1573461917
 # mas "Vimari", id: 1480933944
-# mas "Wipr", id: 1320666476
+mas "Wipr", id: 1320666476

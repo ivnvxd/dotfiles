@@ -78,7 +78,7 @@ git config --global core.excludesfile ~/.gitignore_global
 from <https://github.com/ivnvxd/dotfiles>
 
 ```sh
-git clone git@github.com:ivnvxd/dotfiles.git ~
+git clone git@github.com:ivnvxd/dotfiles.git ~/dotfiles
 ```
 
 ## 4. Install everything from  `~/Brewfile`
@@ -129,7 +129,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-## *5.1 Setup fish shell*
+## *5.1 (optional) Setup fish shell*
 
 Add fish to the shell list:
 
@@ -149,10 +149,10 @@ chsh -s $(which fish)
 set-option -g default-shell "/opt/homebrew/bin/fish"
 ```
 
-Install fish `pure` theme:
+Set theme:
 
 ```sh
-fisher install rafaelrinaldi/pure
+fish_config theme save "Catppuccin Mocha"
 ```
 
 ## 6. Setup tmux
@@ -203,17 +203,8 @@ to
 
 ```sh
 chflags nohidden ~/Library  # Show Library folder
-```
-
-```sh
 defaults write com.apple.finder AppleShowAllFiles true  # Show hidden files
-```
-
-```sh
 defaults write com.apple.finder ShowPathbar -bool true  # Show path bar
-```
-
-```sh
 defaults write com.apple.finder ShowStatusBar -bool true  # Show status bar
 ```
 
@@ -252,7 +243,6 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-
 ```
 
 ## 12. Setup VSCode
@@ -266,5 +256,31 @@ Install extensions:
 *To create a list of installed extensions:*
 
 ```sh
-code --list-extensions > extensions.txt
+code --list-extensions > vscode_extensions.txt
+```
+
+## Setup AI agents
+
+### Claude Code
+
+```sh
+npm install -g @anthropic-ai/claude-code
+```
+
+### OpenAI Codex
+
+```sh
+npm install -g @openai/codex
+```
+
+### Gemini CLI
+
+```sh
+npm install -g @google/gemini-cli
+```
+
+### Qwen Code
+
+```sh
+npm install -g @qwen-code/qwen-code
 ```

@@ -3,7 +3,20 @@ weak-model: gpt-4o-mini
 cache-prompts: true
 auto-commits: false
 watch-files: true
-code-theme: dracula
+#dark-mode: true
+pretty: true
+#stream: true
+
+user-input-color: "#a6e3a1"
+tool-output-color: "#cdd6f4"
+tool-error-color: "#f38ba8"
+tool-warning-color: "#fab387"
+assistant-output-color: "#89b4fa"
+completion-menu-color: "#fab387"
+completion-menu-bg-color: "#1e1e2e"
+completion-menu-current-bg-color: "#fab387"
+completion-menu-current-color: "#1e1e2e"
+code-theme: github-dark
 
 ##########################################################
 # Sample .aider.conf.yml

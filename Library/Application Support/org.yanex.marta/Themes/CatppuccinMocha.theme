@@ -1,0 +1,134 @@
+name "Catppuccin Mocha"
+
+base {
+    appearance "dark"
+    background #1e1e2e
+    separator #313244
+    text #cdd6f4
+}
+
+actionBar {
+    separator #181825
+
+    button {
+        background #313244
+        hotkey #a6adc8
+        text #bac2de
+    }
+}
+
+asyncProgressBar {
+    border #a6adc8
+    progress #a6e3a1
+    itemProgress #94e2d5
+}
+
+breadcrumbs {
+    color1 #1e1e2e
+    color2 #313244
+    color3 #45475a
+    separator #6c7086
+    text #cdd6f4
+}
+
+files {
+    background {
+        alternate #181825
+        current #585b70
+        currentSelected #585b70
+        selected #1e1e2e
+    }
+
+    dragDropSelection {
+        color #b4befe
+        width 1
+    }
+
+    text {
+        current #ffffff
+        currentSelected #fab387
+        hidden #7f849c
+        matched #f38ba8
+        selected #fab387
+
+        highlighting1 #89dceb
+        highlighting2 #a6e3a1
+        highlighting3 #f5c2e7
+        highlighting4 #cba6f7
+    }
+}
+
+searchBar {
+    query {
+        border #313244
+        placeholder #cdd6f4
+    }
+
+    results {
+        highlighting #ffffff
+        selection #89b4fa
+        subtitle #a6adc8
+    }
+
+    rowSeparator {
+        color #313244
+        show true
+    }
+}
+
+statusBar {
+    background #181825
+    border #313244
+    text #cdd6f4
+    quickSelectNoResultsHighlighting #f38ba8
+}
+
+tableHeader {
+    separator #313244
+    text #bac2de
+
+    pressed {
+        background #313244
+    }
+}
+
+tabs {
+    active {
+        text #cdd6f4
+    }
+
+    inactive {
+        background #1e1e2e
+        text #6c7086
+    }
+}
+
+terminal {
+    caret {
+        background #45475a
+        text #ffffff
+    }
+}
+
+textEditor {
+    error #f38ba8
+    warning #fab387
+    keyword #a6e3a1
+    comment #7f849c
+    identifier #f5c2e7
+
+    literal {
+        string #a6e3a1
+        number #89b4fa
+        color #89b4fa
+    }
+
+    gutter {
+        background #313244
+        text #cdd6f4
+    }
+}
+
+titleBar {
+    text #bac2de
+}

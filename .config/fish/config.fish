@@ -3,24 +3,23 @@ if status is-interactive
 end
 
 # Paths
-set -gx GOPATH $HOME/go  # Go path
-set -gx PATH $GOPATH/bin $PATH  # Go binaries
+set -gx GOPATH $HOME/go # Go path
+set -gx PATH $GOPATH/bin $PATH # Go binaries
 
 # Aliases
-alias ls='exa'
-alias cat='bat'
+alias ls='eza'
+alias l='ls -lahF'
+
 alias vi='nvim'
 alias vim='nvim'
 
-alias ll='ls -la'
-alias la='ls -lah'
-
 alias ..='cd ..'
+alias ...='cd ../..'
 alias cd..='cd ..'
 
 # Setup fzf
 fzf --fish | source
-bind -M insert "ç" fzf-cd-widget
+bind -M insert ç fzf-cd-widget
 
 # Change fzf theme
 set -Ux FZF_DEFAULT_OPTS "\
@@ -29,9 +28,6 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --multi"
-
-# Activate thefuck
-thefuck --alias | source
 
 # Update all
 function update -d "update brew, fish, fisher and mac app store"
@@ -53,5 +49,24 @@ function update -d "update brew, fish, fisher and mac app store"
     exit 0
 end
 
-# Activate starship
+# Change current working directory using yazi
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
+# Thefuck
+thefuck --alias | source
+
+# Starship Prompt
 starship init fish | source
+
+# Zoxide
+zoxide init fish | source
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/ve/.lmstudio/bin
