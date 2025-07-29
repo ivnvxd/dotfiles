@@ -29,7 +29,7 @@ clipboard-paste-protection=true
 mouse-hide-while-typing = true
 mouse-shift-capture = never
 
-macos-option-as-alt = false
+macos-option-as-alt = true
 
 keybind = alt+\=new_split:right
 keybind = alt+-=new_split:down

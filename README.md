@@ -241,3 +241,29 @@ Install extensions:
 ```sh
 code --list-extensions > vscode_extensions.txt
 ```
+
+## Setup AI agents
+
+### Claude Code
+
+```sh
+npm install -g @anthropic-ai/claude-code
+```
+
+### OpenAI Codex
+
+```sh
+npm install -g @openai/codex
+```
+
+### Gemini CLI
+
+```sh
+npm install -g @google/gemini-cli
+```
+
+### Qwen Code
+
+```sh
+npm install -g @qwen-code/qwen-code
+```
