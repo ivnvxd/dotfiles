@@ -103,8 +103,6 @@ set laststatus=2
 " To use fzf in Vim
 set rtp+=/opt/homebrew/opt/fzf
 
-" To use fzf in Vim
-set rtp+=/opt/homebrew/opt/fzf
 
 " PLUGINS ----------------------------------------------------------------------
 
