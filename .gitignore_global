@@ -75,18 +75,15 @@ $RECYCLE.BIN/
 *.sass.map
 *.scss.map
 
-# Aider
+# AI
 .aider*
 !.aider.conf.yml
 !.aiderignore
-
-# Cursor
 .cursor/
 .cursorrules
-
-# Roo Code
-.roo
-
-# Claude Code
-.claude
+.qodo
+.claude/
 CLAUDE.md
+AGENTS.md
+GEMINI.md
+.serena

@@ -13,6 +13,7 @@ brew "cmake"
 brew "claude-code"
 brew "codex"
 brew "elixir"
+# cask "cursor"
 # brew "flake8"
 brew "gemini-cli"
 brew "git"
@@ -24,9 +25,10 @@ brew "jupyterlab"
 brew "neovim"
 brew "node"
 # brew "numpy"
-brew "podman"
+brew "oven-sh/bun/bun"
+# brew "podman"
 brew "postgresql@17"
-brew "poetry"
+# brew "poetry"
 # brew "pre-commit"
 brew "python"
 # brew "python@3.10"
@@ -58,8 +60,10 @@ cask "zed"
 ### CLI ###
 
 brew "asciinema"
+brew "bash"
 brew "bat"
 brew "btop"
+brew "certifi"
 brew "clifm"
 brew "cloc"
 brew "curl"
@@ -78,6 +82,7 @@ brew "lazydocker"
 brew "lazygit"
 brew "mas"
 brew "minikube"
+brew "mitmproxy"
 brew "ollama"
 brew "protobuf"
 brew "pure"
@@ -124,6 +129,7 @@ cask "coconutbattery"
 # cask "deepl"
 # cask "displaperture"
 cask "grandperspective"
+cask "handy"
 # cask "hiddenbar"
 cask "imageoptim"
 cask "jordanbaird-ice"
@@ -156,6 +162,7 @@ cask "adobe-acrobat-reader"
 # cask "blender"
 cask "calibre"
 cask "chatgpt"
+# cask "chatgpt-atlas"
 cask "claude"
 # cask "cloudcompare"
 # cask "cron"
@@ -189,14 +196,16 @@ cask "telegram"
 cask "transmission"
 cask "vlc"
 cask "whatsapp"
-cask "zen-browser"
 cask "zoom"
+# cask "vivaldi"
+# cask "zen-browser"
 
 
 ### Fonts ###
 
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
+cask "font-google-sans-code"
 cask "font-hack"
 cask "font-hack-nerd-font"
 cask "font-ibm-plex-mono"
@@ -210,7 +219,6 @@ cask "font-martian-mono-nerd-font"
 cask "font-meslo-lg"
 cask "font-meslo-lg-nerd-font"
 cask "font-monaspace"
-cask "font-monaspace-nerd-font"
 cask "font-poppins"
 cask "font-red-hat-mono"
 cask "font-source-code-pro"
@@ -222,8 +230,8 @@ cask "font-ubuntu-mono-nerd-font"
 ### App Store ###
 
 mas "Amphetamine", id: 937984704
-mas "Desk Remote Control", id: 1509037746
-mas "FoXray", id: 6448898396
+# mas "Desk Remote Control", id: 1509037746
+# mas "FoXray", id: 6448898396
 # mas "GarageBand", id: 682658836
 # mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -241,12 +249,12 @@ mas "AdGuard for Safari", id: 1440147259
 # mas "Bitwarden", id: 1352778147
 mas "Consent-O-Matic", id: 1606897889
 # mas "DuckDuckGo Privacy for Safari", id: 1482920575
-mas "Hush", id: 1544743900
+# mas "Hush", id: 1544743900
 # mas "Noir", id: 1592917505
-mas "PayPal Honey", id: 1472777122
+# mas "PayPal Honey", id: 1472777122
 # mas "Polyglot", id: 1471801525
 # mas "Save to Pocket", id: 1477385213
-mas "Save to Raindrop.io", id: 1549370672
+# mas "Save to Raindrop.io", id: 1549370672
 mas "SponsorBlock", id: 1573461917
 # mas "Vimari", id: 1480933944
-mas "Wipr", id: 1320666476
+# mas "Wipr", id: 1320666476
