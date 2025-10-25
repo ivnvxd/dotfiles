@@ -45,3 +45,4 @@ keybind = alt+l=goto_split:right
 keybind = super+f=write_screen_file:open
 # keybind = ctrl+с=text:\x03
 # keybind = shift+enter=text:\n
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
